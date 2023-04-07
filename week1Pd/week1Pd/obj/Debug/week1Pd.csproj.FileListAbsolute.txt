@@ -1,0 +1,8 @@
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\week1Pd\bin\Debug\week1Pd.exe.config
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\week1Pd\bin\Debug\week1Pd.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\week1Pd\bin\Debug\week1Pd.pdb
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\week1Pd\obj\Debug\week1Pd.csproj.AssemblyReference.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\week1Pd\obj\Debug\week1Pd.csproj.SuggestedBindingRedirects.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\week1Pd\obj\Debug\week1Pd.csproj.CoreCompileInputs.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\week1Pd\obj\Debug\week1Pd.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\week1Pd\obj\Debug\week1Pd.pdb
