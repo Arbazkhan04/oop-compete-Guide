@@ -1,0 +1,11 @@
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\game\game\bin\Debug\game.exe.config
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\game\game\bin\Debug\game.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\game\game\bin\Debug\game.pdb
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\game\game\obj\Debug\game.csproj.AssemblyReference.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\game\game\obj\Debug\game.csproj.SuggestedBindingRedirects.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\game\game\obj\Debug\game.csproj.CoreCompileInputs.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\game\game\obj\Debug\game.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\game\game\obj\Debug\game.pdb
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\game\game\bin\Debug\EZInput.dll
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\game\game\bin\Debug\EZInput.xml
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week1Pd\game\game\obj\Debug\game.csproj.CopyComplete
