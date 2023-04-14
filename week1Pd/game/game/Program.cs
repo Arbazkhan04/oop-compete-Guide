@@ -32,9 +32,11 @@ namespace game
             printMaze(map);
 
             //player cooordinates
-            int playerX =10;
-            int palyerY = 4;
-            printRightPlayer(playerX, palyerY);
+            playerLocation Monochoki = new playerLocation();
+
+             Monochoki.playerX =10;
+             Monochoki.playerY = 4;
+            printRightPlayer(Monochoki);
 
            // Console.SetCursorPosition(palyerY, playerX);
            // Console.Write("P");
@@ -44,19 +46,19 @@ namespace game
                 Thread.Sleep(90);
                 if (Keyboard.IsKeyPressed(Key.RightArrow))
                 {
-                    movePlayerRight(map, ref playerX, ref palyerY);
+                    movePlayerRight(map, Monochoki);
                 }
                 if (Keyboard.IsKeyPressed(Key.LeftArrow))
                 {
-                    movePlayerLeft(map, ref playerX, ref palyerY);
+                    movePlayerLeft(map, Monochoki);
                 }
                 if (Keyboard.IsKeyPressed(Key.UpArrow))
                 {
-                    movePlayerUp(map, ref playerX, ref palyerY);
+                    movePlayerUp(map, Monochoki);
                 }
                 if(Keyboard.IsKeyPressed(Key.DownArrow))
                 {
-                    movePlayerDown(map, ref playerX,  ref palyerY);
+                    movePlayerDown(map, Monochoki);
                 }
             }
             Console.ReadKey();
@@ -64,34 +66,34 @@ namespace game
 
 
         }
-        static void movePlayerDown(char[,] map ,ref int playerX,ref int playerY)
+        static void movePlayerDown(char[,] map ,playerLocation monochoki)
         {
-            if (map[playerX+4, playerY] == ' '|| map[playerX + 4, playerY] != '*')
+            if (map[monochoki.playerX +4, monochoki.playerY] == ' '|| map[monochoki.playerX + 4, monochoki.playerY] != '*')
             {
-                ereasePlayer(playerX, playerY);
-                playerX = playerX+1;
-                printLeftPlayer(playerX, playerY);
+                ereasePlayer(monochoki.playerX, monochoki.playerY);
+                monochoki.playerX = monochoki.playerX +1;
+                printLeftPlayer(monochoki.playerX, monochoki.playerY);
 
             }
         }
-        static void movePlayerUp(char[,] map,ref int playerX,ref int playerY)
+        static void movePlayerUp(char[,] map,playerLocation monochoki)
         {
-            if (map[playerX-2, playerY ] == ' '|| map[playerX-2, playerY] != '*')
+            if (map[monochoki.playerX-2, monochoki.playerY ] == ' '|| map[monochoki.playerX -2, monochoki.playerY] != '*')
             {
-                ereasePlayer(playerX, playerY);
-                playerX = playerX - 1;
-                printLeftPlayer(playerX, playerY);
+                ereasePlayer(monochoki.playerX, monochoki.playerY);
+                monochoki.playerX = monochoki.playerX - 1;
+                printLeftPlayer(monochoki.playerX, monochoki.playerY);
 
             }
         }
-        static void movePlayerLeft( char [,] map ,ref int playerX, ref int playerY)
+        static void movePlayerLeft( char [,] map,playerLocation monochoki)
         {
 
-            if (map[playerX, playerY - 1] == ' '|| map[playerX, playerY-1] != '*')
+            if (map[monochoki.playerX, monochoki.playerY - 1] == ' '|| map[monochoki.playerX, monochoki.playerY-1] != '*')
             {
-                ereasePlayer(playerX, playerY);
-                playerY = playerY - 1;
-                printLeftPlayer(playerX, playerY);
+                ereasePlayer(monochoki.playerX, monochoki.playerY);
+                monochoki.playerY = monochoki.playerY - 1;
+                printLeftPlayer(monochoki.playerX, monochoki.playerY);
 
             }
         }
@@ -125,16 +127,16 @@ namespace game
             }
         }
 
-            static void printRightPlayer(int x,int y)
+         static void printRightPlayer(playerLocation monochoki )
         {
-            Console.SetCursorPosition(y,x);
+            Console.SetCursorPosition(monochoki.playerY,monochoki.playerX);
             for (int i = 0; i < 2; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
                     Console.Write(hel2[i,j]);
                 }
-                Console.SetCursorPosition(y, x+1); ;
+                Console.SetCursorPosition(monochoki.playerY, monochoki.playerX+1); ;
             }
         }
 
@@ -153,13 +155,13 @@ namespace game
             }
         }
 
-        static void movePlayerRight(char[,] map,ref int playerX,ref int playerY)
+        static void movePlayerRight(char[,] map,playerLocation monochoki)
         {
-            if (map[playerX, playerY + 9] == ' ' || map[playerX,playerY+9]!='*')
+            if (map[monochoki.playerX, monochoki.playerY + 9] == ' ' || map[monochoki.playerX, monochoki.playerY + 9]!='*')
             {
-                ereasePlayer(playerX, playerY);
-                playerY = playerY + 1;
-                printRightPlayer(playerX, playerY);
+                ereasePlayer(monochoki.playerX, monochoki.playerY);
+                monochoki.playerY = monochoki.playerY + 1;
+                printRightPlayer(monochoki);//it may create an error
             }
         }
       
