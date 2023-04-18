@@ -13,16 +13,19 @@ namespace week1
         {
             //task1();
             //task2();
-          //  task3();
-           // task4();
+            //task3();
+            //task4();
             //task7();
             //task89();
             //task10();
             //task11();
             //task12();
-           // task13();
+            //task13();
             //task15();
-            task16();
+            //task16();
+            getInputs();
+
+
         }
         static void task1()
         {
@@ -224,8 +227,23 @@ namespace week1
                 Console.ReadKey();
             }
         }
-            
+        static void getInputs()
+        {
+            Console.WriteLine("Enter a first number ");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter a second number");
+            int b = int.Parse(Console.ReadLine());
+            int c=task11(a, b);
+            Console.WriteLine(c);
+            Console.ReadKey();
 
-        
+
+
+        }
+        static int  task11(int a,int b)
+        {
+            return a + b;
+        }
+            
     }
 }

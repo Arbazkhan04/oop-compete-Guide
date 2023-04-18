@@ -1,0 +1,8 @@
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week3pd\Ecommerence\Ecommerence\bin\Debug\Ecommerence.exe.config
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week3pd\Ecommerence\Ecommerence\bin\Debug\Ecommerence.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week3pd\Ecommerence\Ecommerence\bin\Debug\Ecommerence.pdb
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week3pd\Ecommerence\Ecommerence\obj\Debug\Ecommerence.csproj.AssemblyReference.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week3pd\Ecommerence\Ecommerence\obj\Debug\Ecommerence.csproj.SuggestedBindingRedirects.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week3pd\Ecommerence\Ecommerence\obj\Debug\Ecommerence.csproj.CoreCompileInputs.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week3pd\Ecommerence\Ecommerence\obj\Debug\Ecommerence.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\week3pd\Ecommerence\Ecommerence\obj\Debug\Ecommerence.pdb

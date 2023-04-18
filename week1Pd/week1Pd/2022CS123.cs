@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Data;
 
 namespace week1Pd
 {
@@ -22,29 +23,31 @@ namespace week1Pd
         static void loginScreenMenu()
         {
             Console.WriteLine("--------login menu -----------");
-            Console.WriteLine("1-Sing Up ");
-            Console.WriteLine("2-Sing In");
+            Console.WriteLine("1-SignUp ");
+            Console.WriteLine("2-SignIn");
             Console.WriteLine("3-Exit");
         }
         static void loginNavigation()
         {
-          
-            String[] name = new String[5];
-            String[] passwordd = new String[5];
-            int totalActiveUser = 0;
-            loadLoginDataIntoArray(name, passwordd, ref totalActiveUser); 
+
+            //String[] name = new String[5];
+            // String[] passwordd = new String[5];
+            Authentication myObject = new Authentication();
+            List<Authentication> auth=new List<Authentication>();
+           
+            loadLoginDataIntoArray(myObject,auth); 
             int loginOpt = getOption();
             while(loginOpt!=3)
             {
                 if (loginOpt == 1)
                 {
                     Console.Clear();
-                    singUp(name, passwordd, ref totalActiveUser);
+                    singUp(myObject,auth);
                 }
                 else if (loginOpt == 2)
                 {
                     Console.Clear();
-                    singIn(name, passwordd, ref totalActiveUser);
+                    singIn(auth);
                 }
                 Console.Clear();
                 loginScreenMenu();
@@ -52,30 +55,31 @@ namespace week1Pd
             }
            
         }
-        static void singUp(String[] name, String[] password, ref int totalActiveUser)
+        static void singUp(Authentication obj, List<Authentication> auth)
         {
 
             Console.Write("Enter you name");
-            String UName = Console.ReadLine();
+             obj.name = Console.ReadLine();
             Console.Write("Enter your password ");
-            String UPass = Console.ReadLine();
-            name[totalActiveUser] = UName;
-            password[totalActiveUser] = UPass;
-            totalActiveUser++;
-            storeLoginDataIntoTheFile(UName, UPass);
-            //Console.ReadKey();
+             obj.password = Console.ReadLine();
+            //name[totalActiveUser] = UName;
+            //password[totalActiveUser] = UPass;
+            //totalActiveUser++;
+            storeLoginDataIntoTheFile(obj.name, obj.password);
+            auth.Add(obj);
+            Console.ReadKey();
 
         }
-        static void singIn(String[] name, String[] password, ref int totalActiveUser)
+        static void singIn(List<Authentication> auth)
         {
             bool isExist = false;
             Console.Write("Enter your name");
             String UName = Console.ReadLine();
             Console.Write("Enter your password ");
             String UPass = Console.ReadLine();
-            for (int i = 0; i < totalActiveUser; i++)
+            for (int i = 0; i < auth.Count; i++)
             {
-                if (name[i] == UName && password[i] == UPass)
+                if (auth[i].name == UName && auth[i].password== UPass)
                 {
                     isExist = true;
                 }
@@ -103,7 +107,6 @@ namespace week1Pd
             Console.WriteLine("4-Delete Product");
             Console.WriteLine("5-Exit");
 //          Console.ReadKey();
-
         }
         static void storeLoginDataIntoTheFile(String name, String password)
         {
@@ -114,7 +117,7 @@ namespace week1Pd
             file.Flush();
             file.Close();
         }
-        static void loadLoginDataIntoArray(String[] name , String[] password, ref int totalUser)
+        static void loadLoginDataIntoArray(Authentication myobjec,List<Authentication> auth)
         {
             String path = "C:\\Users\\Arbaz khan\\Desktop\\oop-compete-Guide\\week1Pd\\week1Pd\\file.txt";
             if(File.Exists(path))
@@ -123,12 +126,15 @@ namespace week1Pd
                 String record;
                 while ((record = file.ReadLine()) != null)
                 {
-                    name[totalUser] = parseData(record, 1);
+                    
+                    myobjec.name= parseData(record, 1);
                     //Console.Write(name[totalUser]);
-                    password[totalUser] = parseData(record, 2);
-                    Console.Write(password[totalUser]);
-                    totalUser++;
+                    myobjec.password = parseData(record, 2);
+                    //Console.Write(password[totalUser]);
+                    //totalUser++;
+                    auth.Add(myobjec);
                 }
+               
                 file.Close();
             }
             else
@@ -146,7 +152,7 @@ namespace week1Pd
             file.Close();
         }
 
-        static void loadProductData(String[] productNames, int[] productPrice, int[] productQuantity, ref int totalProducts)
+        static void loadProductData(items myobject,List<items> item)
         {
             String path = "C:\\Users\\Arbaz khan\\Desktop\\oop-compete-Guide\\week1Pd\\week1Pd\\product.txt";
             if (File.Exists(path))
@@ -155,10 +161,10 @@ namespace week1Pd
                 String record;
                 while ((record = file.ReadLine()) != null)
                 {
-                    productNames[totalProducts] = parseData(record, 1);
-                    productPrice[totalProducts] = int.Parse(parseData(record, 2));
-                    productQuantity[totalProducts] = int.Parse(parseData(record, 3));
-                    totalProducts++;
+                     myobject.productName = parseData(record, 1);
+                     myobject.productPrice= int.Parse(parseData(record, 2));
+                     myobject.productQuantity = int.Parse(parseData(record, 3));
+                     item.Add(myobject);
                 }
                 file.Close();
             }
@@ -193,11 +199,13 @@ namespace week1Pd
         }
         static void navigationScreen()
         {
-            int volumeOfArr = 0;
-            string[] productNames = new string[10];
-            int[] productPrice = new int[10];
-            int[] productQuantity = new int[10];
-            loadProductData(productNames, productPrice, productQuantity, ref volumeOfArr);
+            //int volumeOfArr = 0;
+            //string[] productNames = new string[10];
+            //int[] productPrice = new int[10];
+            //int[] productQuantity = new int[10];
+            items itemObject = new items();
+            List<items> item = new List<items>(); 
+            loadProductData(itemObject,item);
 
 
             int opt=getOption();
@@ -205,22 +213,22 @@ namespace week1Pd
             {
                 if (opt == 1)
                 {
-                    createProduct(productNames, productPrice, productQuantity, ref volumeOfArr);
+                    createProduct(itemObject,item);
                 }
                 else if (opt == 2)
                 {
                     Console.Clear();
-                    getAllProduct(productNames, productPrice, productQuantity,  volumeOfArr);
+                    getAllProduct(item);
                 }
                 else if(opt==4)
                 {
                     Console.Clear();
-                    deleteProduct(productNames, productPrice, productQuantity, ref volumeOfArr);
+                    deleteProduct(item);
                 }
                 else if(opt==3)
                 {
                     Console.Clear();
-                    updateProduct(productNames, productPrice, productQuantity, ref volumeOfArr);
+                    updateProduct(itemObject,item);
                 }
                 Console.Clear();
                 screenMenu();
@@ -230,93 +238,72 @@ namespace week1Pd
             
 
         }
-        static void createProduct(string[] productname, int[] productPrice, int[] productQuanity, ref int volumeOfArr)
+        static void createProduct(items myObject,List<items> item)
         {
 
             Console.WriteLine("------Welcome To the Create Product--------");
             Console.WriteLine("how many product you want to add");
             int numberOfProduct = int.Parse(Console.ReadLine());
-            volumeOfArr += numberOfProduct;//update the lenght of original array
+            //volumeOfArr += numberOfProduct;//update the lenght of original array
 
             for (int i = 0; i < numberOfProduct; i++)
             {
                 Console.Write("Enter the name of product ");
-                string Name = Console.ReadLine();
+                 myObject.productName = Console.ReadLine();
                 Console.Write("Enter the price for the product ");
-                int price = int.Parse(Console.ReadLine());
+                 myObject.productPrice = int.Parse(Console.ReadLine());
                 Console.Write("Enter the Number of quantity ");
-                int quantity = int.Parse(Console.ReadLine());
-                storeProductDataIntoFile(Name, price, quantity);
-
-
-                productname[i] = Name;
-                productPrice[i] = price;
-                productQuanity[i] = quantity;
+                 myObject.productQuantity = int.Parse(Console.ReadLine());
+                storeProductDataIntoFile(myObject.productName,myObject.productPrice,myObject.productQuantity);
+                item.Add(myObject);
                // Console.WriteLine("The product name is {0} and price {1} and quantity {2}", Name, price, quantity);
             }
-            for(int i=0;i<numberOfProduct;i++)
+           foreach(items itema in item)
             {
-                Console.WriteLine(i + ": " + productname[i]);
-                Console.WriteLine(i + ": " + productPrice[i]);
-                Console.WriteLine(i + ": " + productQuanity[i]);
-
+                Console.WriteLine(itema.productName);
+                Console.WriteLine(itema.productPrice);
+                Console.WriteLine(itema.productQuantity);
             }
             Console.ReadKey();
 
         }
-        static void getAllProduct(string[] productName,int[] productPrice, int[] prodctquantity,  int volumeOfPro)
+        static void getAllProduct(List<items> item)
         {
             Console.WriteLine("--------------All Prodcut-------------");
-            Console.Write(volumeOfPro);
-            for(int i=0;i<volumeOfPro;i++)
+            //Console.Write(volumeOfPro);
+           for(int i=0;i<item.Count;i++)
             {
-                Console.WriteLine(i + ": " + productName[i]);
-                Console.WriteLine(i + ": " + productPrice[i]);
-                Console.WriteLine(i + ": " + prodctquantity[i]);
+                Console.WriteLine(i + ": " + item[i].productName);
+                Console.WriteLine(i + ": " + item[i].productPrice);
+                Console.WriteLine(i + ": " + item[i].productQuantity);
 
             }
             Console.ReadKey();
         }
-        static void deleteProduct(string[] productName, int[] prodctPrice, int[] productQuantity ,ref int sizeOfArray)
+        static void deleteProduct(List<items> item)
         {
            // Console.WriteLine(sizeOfArray);
-           for(int i=0;i<sizeOfArray;i++)
+           for(int i=0;i<item.Count;i++)
             {
-                Console.WriteLine(i + ": " + productName[i]);
-                Console.WriteLine(i + ": " + prodctPrice[i]);
-                Console.WriteLine(i + ": " + productQuantity[i]);
+                Console.WriteLine(i + ": " + item[i].productName);
+                Console.WriteLine(i + ": " + item[i].productPrice);
+                Console.WriteLine(i + ": " + item[i].productQuantity);
             }
             Console.Write("Enter id of the product you want to delete ");
             int id = int.Parse(Console.ReadLine());
-            for(int i=id; i< productName.Length-1;i++)
-            {
-                string AuxillaryPName = productName[i];
-                int AuxillaryPPrice = prodctPrice[i];
-                int AuxillaryPQuantity = productQuantity[i];
-
-                productName[i] = productName[i+1];
-                productName[i + 1] = AuxillaryPName;
-
-                prodctPrice[i] = prodctPrice[i + 1];
-                prodctPrice[i + 1] = AuxillaryPPrice;
-
-                productQuantity[i] = productQuantity[i + 1];
-                productQuantity[i + 1] = AuxillaryPPrice;
-                
-               
-            }
+            item.RemoveAt(id);
+           
             Console.WriteLine("Product is deleted ");
-            sizeOfArray--;
             Console.ReadKey();
         }
-        static void updateProduct(string[] productName, int[] prodctPrice, int[] productQuantity, ref int sizeOfArray)
+        static void updateProduct(items itemObj,List<items> item)
         {
-            for(int i=0;i<sizeOfArray;i++)
+            for(int i=0;i<item.Count;i++)
             {
                 {
-                    Console.WriteLine(i + ": " + productName[i]);
-                    Console.WriteLine(i + ": " + prodctPrice[i]);
-                    Console.WriteLine(i + ": " + productQuantity[i]);
+                    Console.WriteLine(i + ": " + item[i].productName);
+                    Console.WriteLine(i + ": " + item[i].productPrice);
+                    Console.WriteLine(i + ": " + item[i].productQuantity);
                 }
             }
             Console.Write("Enter the id of the product you want to update ");
@@ -327,9 +314,9 @@ namespace week1Pd
             int updatedProductPrice = int.Parse(Console.ReadLine());
             Console.Write("Enter the product quantity ");
             int updatedProductQuantity = int.Parse(Console.ReadLine());
-            productName[id] = updateProductName;
-            prodctPrice[id] = updatedProductPrice;
-            productQuantity[id] = updatedProductQuantity;
+            item[id].productName = updateProductName;
+            item[id].productPrice = updatedProductPrice;
+            item[id].productQuantity = updatedProductQuantity;
             Console.Write("Prodcut Updated ");
             Console.ReadKey();
         }
