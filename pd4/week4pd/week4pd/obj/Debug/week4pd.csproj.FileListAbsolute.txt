@@ -1,0 +1,8 @@
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\pd4\week4pd\week4pd\bin\Debug\week4pd.exe.config
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\pd4\week4pd\week4pd\bin\Debug\week4pd.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\pd4\week4pd\week4pd\bin\Debug\week4pd.pdb
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\pd4\week4pd\week4pd\obj\Debug\week4pd.csproj.AssemblyReference.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\pd4\week4pd\week4pd\obj\Debug\week4pd.csproj.SuggestedBindingRedirects.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\pd4\week4pd\week4pd\obj\Debug\week4pd.csproj.CoreCompileInputs.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\pd4\week4pd\week4pd\obj\Debug\week4pd.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\pd4\week4pd\week4pd\obj\Debug\week4pd.pdb
