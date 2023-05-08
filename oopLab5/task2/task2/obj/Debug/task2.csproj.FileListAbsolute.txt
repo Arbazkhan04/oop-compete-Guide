@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\oopLab5\task2\task2\bin\Debug\task2.exe.config
+C:\Users\Administrator\Desktop\oopLab5\task2\task2\bin\Debug\task2.exe
+C:\Users\Administrator\Desktop\oopLab5\task2\task2\bin\Debug\task2.pdb
+C:\Users\Administrator\Desktop\oopLab5\task2\task2\obj\Debug\task2.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\oopLab5\task2\task2\obj\Debug\task2.exe
+C:\Users\Administrator\Desktop\oopLab5\task2\task2\obj\Debug\task2.pdb
