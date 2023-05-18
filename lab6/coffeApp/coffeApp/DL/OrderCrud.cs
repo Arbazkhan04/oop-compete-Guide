@@ -11,12 +11,14 @@ namespace coffeApp.DL
     {
          static List<string> order = new List<string>();
 
-        public static void addOrder(string name)
+        public static bool addOrder(string name)
         {
             if (isOrderExist(name))
             {
                 order.Add(name);
+                return true;
             }
+            return false;
         }
         public static bool isOrderExist(string name)
         {

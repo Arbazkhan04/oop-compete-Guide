@@ -39,13 +39,15 @@ namespace Ecommerence
             {
                 if(opt==1)
                 {
-                    product.addProdcut();
-                    products.Add(product);
+                   products.Add(product.addProduct());
                 }
-              
+              else if(opt==2)
+                {
+                    viewAllProduct(products);
+                }
+                opt = option();
             }
 
         }
-       
     }
 }

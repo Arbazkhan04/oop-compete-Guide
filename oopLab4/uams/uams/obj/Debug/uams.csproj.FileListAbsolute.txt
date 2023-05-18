@@ -1,0 +1,8 @@
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oopLab5\uams\uams\bin\Debug\uams.exe.config
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oopLab5\uams\uams\bin\Debug\uams.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oopLab5\uams\uams\bin\Debug\uams.pdb
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oopLab5\uams\uams\obj\Debug\uams.csproj.AssemblyReference.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oopLab5\uams\uams\obj\Debug\uams.csproj.SuggestedBindingRedirects.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oopLab5\uams\uams\obj\Debug\uams.csproj.CoreCompileInputs.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oopLab5\uams\uams\obj\Debug\uams.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oopLab5\uams\uams\obj\Debug\uams.pdb

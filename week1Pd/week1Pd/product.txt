@@ -3,3 +3,8 @@ kdksl,32,23
 kdlal,32,12
 abd,32,12
 da,43,23
+shirt,930,42
+dkkl,432,23
+rygyhg,32,53
+dasf,2,43
+fda,43,23

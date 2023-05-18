@@ -32,10 +32,9 @@ namespace game
             printMaze(map);
 
             //player cooordinates
-            playerLocation Monochoki = new playerLocation();
-
-             Monochoki.playerX =10;
-             Monochoki.playerY = 4;
+            int playerX = 10;
+            int playerY = 4;
+            playerLocation Monochoki = new playerLocation(playerX,playerY);
             printRightPlayer(Monochoki);
 
            // Console.SetCursorPosition(palyerY, playerX);

@@ -11,5 +11,11 @@ namespace game
         public int playerX;
         public int playerY;
 
+        pulbic playerLocation(int playerX,int PlayerY)
+        {
+            this.playerX = playerX;
+            this.playerY = playerY;
+        }
+
     }
 }

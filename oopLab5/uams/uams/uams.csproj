@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CA1F2C46-C46F-414D-BA5B-3BBA262D7D9E}</ProjectGuid>
+    <ProjectGuid>{E64F0DBA-CF39-4C19-9111-EAADB4312760}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>uams</RootNamespace>
     <AssemblyName>uams</AssemblyName>

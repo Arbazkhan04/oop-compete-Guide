@@ -32,17 +32,15 @@ namespace week1Pd
 
             //String[] name = new String[5];
             // String[] passwordd = new String[5];
-            Authentication myObject = new Authentication();
             List<Authentication> auth=new List<Authentication>();
-           
-            loadLoginDataIntoArray(myObject,auth); 
+            loadLoginDataIntoArray(auth); 
             int loginOpt = getOption();
             while(loginOpt!=3)
             {
                 if (loginOpt == 1)
                 {
                     Console.Clear();
-                    singUp(myObject,auth);
+                    singUp(auth);
                 }
                 else if (loginOpt == 2)
                 {
@@ -55,18 +53,16 @@ namespace week1Pd
             }
            
         }
-        static void singUp(Authentication obj, List<Authentication> auth)
+        static void singUp(List<Authentication> auth)
         {
 
-            Console.Write("Enter you name");
-             obj.name = Console.ReadLine();
-            Console.Write("Enter your password ");
-             obj.password = Console.ReadLine();
-            //name[totalActiveUser] = UName;
-            //password[totalActiveUser] = UPass;
-            //totalActiveUser++;
-            storeLoginDataIntoTheFile(obj.name, obj.password);
-            auth.Add(obj);
+             Console.Write("Enter you name");
+             name = Console.ReadLine();
+             Console.Write("Enter your password ");
+             password = Console.ReadLine();
+            Authentication s1 = new Authentication(name, password);
+            storeLoginDataIntoTheFile(name,password);
+            auth.Add(s1);
             Console.ReadKey();
 
         }
@@ -117,7 +113,7 @@ namespace week1Pd
             file.Flush();
             file.Close();
         }
-        static void loadLoginDataIntoArray(Authentication myobjec,List<Authentication> auth)
+        static void loadLoginDataIntoArray(List<Authentication> auth)
         {
             String path = "C:\\Users\\Arbaz khan\\Desktop\\oop-compete-Guide\\week1Pd\\week1Pd\\file.txt";
             if(File.Exists(path))
@@ -127,12 +123,14 @@ namespace week1Pd
                 while ((record = file.ReadLine()) != null)
                 {
                     
-                    myobjec.name= parseData(record, 1);
+                    name= parseData(record, 1);
                     //Console.Write(name[totalUser]);
-                    myobjec.password = parseData(record, 2);
+                    password = parseData(record, 2);
                     //Console.Write(password[totalUser]);
                     //totalUser++;
-                    auth.Add(myobjec);
+                
+                    Authentication s1 = new Authentication(name, password);
+                    auth.Add(s1);
                 }
                
                 file.Close();
@@ -152,7 +150,7 @@ namespace week1Pd
             file.Close();
         }
 
-        static void loadProductData(items myobject,List<items> item)
+        static void loadProductData(List<items> item)
         {
             String path = "C:\\Users\\Arbaz khan\\Desktop\\oop-compete-Guide\\week1Pd\\week1Pd\\product.txt";
             if (File.Exists(path))
@@ -161,10 +159,13 @@ namespace week1Pd
                 String record;
                 while ((record = file.ReadLine()) != null)
                 {
-                     myobject.productName = parseData(record, 1);
-                     myobject.productPrice= int.Parse(parseData(record, 2));
-                     myobject.productQuantity = int.Parse(parseData(record, 3));
-                     item.Add(myobject);
+                     productName = parseData(record, 1);
+                     productPrice= int.Parse(parseData(record, 2));
+                     productQuantity = int.Parse(parseData(record, 3));
+             
+                     items s1 = new items(productName, productPrice, productQuantity);
+                     item.Add(s1);
+                     
                 }
                 file.Close();
             }
@@ -173,6 +174,8 @@ namespace week1Pd
                 Console.WriteLine("Path does not exist.");
             }
         }
+        
+        
 
         static String parseData(string data,int line)
         {
@@ -203,9 +206,9 @@ namespace week1Pd
             //string[] productNames = new string[10];
             //int[] productPrice = new int[10];
             //int[] productQuantity = new int[10];
-            items itemObject = new items();
+            
             List<items> item = new List<items>(); 
-            loadProductData(itemObject,item);
+            loadProductData(item);
 
 
             int opt=getOption();
@@ -213,7 +216,7 @@ namespace week1Pd
             {
                 if (opt == 1)
                 {
-                    createProduct(itemObject,item);
+                    createProduct(item);
                 }
                 else if (opt == 2)
                 {
@@ -238,7 +241,7 @@ namespace week1Pd
             
 
         }
-        static void createProduct(items myObject,List<items> item)
+        static void createProduct(List<items> item)
         {
 
             Console.WriteLine("------Welcome To the Create Product--------");
@@ -249,13 +252,15 @@ namespace week1Pd
             for (int i = 0; i < numberOfProduct; i++)
             {
                 Console.Write("Enter the name of product ");
-                 myObject.productName = Console.ReadLine();
+                 productName = Console.ReadLine();
                 Console.Write("Enter the price for the product ");
-                 myObject.productPrice = int.Parse(Console.ReadLine());
+                 productPrice = int.Parse(Console.ReadLine());
                 Console.Write("Enter the Number of quantity ");
-                 myObject.productQuantity = int.Parse(Console.ReadLine());
-                storeProductDataIntoFile(myObject.productName,myObject.productPrice,myObject.productQuantity);
-                item.Add(myObject);
+                 productQuantity = int.Parse(Console.ReadLine());
+
+                items s[i] = new items(productName, productPrice, productQuantity);
+                storeProductDataIntoFile(productName,productPrice,productQuantity);
+                item.Add(s[i]);
                // Console.WriteLine("The product name is {0} and price {1} and quantity {2}", Name, price, quantity);
             }
            foreach(items itema in item)

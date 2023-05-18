@@ -18,9 +18,10 @@ namespace coffeApp.DL
             menuitem.Add(item);
         }
 
-        public static MenuItem viewCheapestItemInMenu()
+        public static string viewCheapestItemInMenu()
         {
             int min = 0;
+           string viewCheapestItemInMenu = "";
             foreach(MenuItem menuList in menuitem)
             {
               if(min<menuList.price)
@@ -33,11 +34,11 @@ namespace coffeApp.DL
             {
                if(min>0 && min==menuList.price)
                 {
-                    return menuList;
+                    viewCheapestItemInMenu= menuList.name;
                 }
             }
 
-            return null;
+            return viewCheapestItemInMenu;
         }
 
         public static List<MenuItem> viewDrinkkMenu()
