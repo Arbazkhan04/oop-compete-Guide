@@ -24,6 +24,7 @@ namespace Business_Application.DL
                     return true;
                 }
             }
+          
             return false;
         }
 
@@ -35,9 +36,9 @@ namespace Business_Application.DL
                 {
                     Console.WriteLine("now update the product");
                     Product p2 = ProductUI.updateProduct();
-                    pll.productName = p.productName;
-                    pll.productPrice = p.productPrice;
-                    pll.productQuantity = p.productQuantity;
+                    pll.productName = p2.productName;
+                    pll.productPrice = p2.productPrice;
+                    pll.productQuantity = p2.productQuantity;
                 }
             }
         }

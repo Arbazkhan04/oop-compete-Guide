@@ -9,22 +9,7 @@ namespace Business_Application.UI
 {
     public class ProductUI
     {
-        public static Product getInputForProduct()
-        {
-            Console.Write("Enter the name of the product ");
-            string pName = Console.ReadLine();
-
-            Console.Write("Enter product price");
-            int pPrice = int.Parse(Console.ReadLine());
-
-            Console.Write("Enter product Quantity");
-            int pQuantity = int.Parse(Console.ReadLine());
-
-            Product p = new Product(pName, pPrice, pQuantity);
-
-            return p;
-
-        }
+       
 
         public static Product  updateProduct()
         {

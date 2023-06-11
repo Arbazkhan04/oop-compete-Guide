@@ -18,5 +18,14 @@ namespace Business_Application.BL
             this.productPrice = productPrice;
             this.productQuantity = productQuantity;
         }
+
+        public virtual string catagory()
+        {
+            return  "undefined";
+        }
+        public virtual double taxPerProduct()
+        {
+            return 0;
+        }
     }
 }

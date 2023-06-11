@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business_Application.BL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,23 @@ using System.Threading.Tasks;
 
 namespace Business_Application.UI
 {
-    internal class MobileUI
+    public class MobileUI
     {
+        public static Mobiles getInputForProduct()
+        {
+            Console.Write("Enter the name of the product ");
+            string pName = Console.ReadLine();
+
+            Console.Write("Enter product price");
+            int pPrice = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter product Quantity");
+            int pQuantity = int.Parse(Console.ReadLine());
+
+            Mobiles p = new Mobiles(pName, pPrice, pQuantity);
+
+            return p;
+
+        }
     }
 }

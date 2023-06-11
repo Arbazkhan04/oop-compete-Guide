@@ -66,10 +66,25 @@ namespace Business_Application.UI
         {
             Console.Write("How many product you want to enter ");
             int count = int.Parse(Console.ReadLine());
+            Console.Write("Select Catagory(1-clothes,2-Mobile)");
+            int catagory = int.Parse(Console.ReadLine());
+           
             for(int i=count;i>0 ;i--)
             {
-                Product p = ProductUI.getInputForProduct();
-                ProductDL.addProduct(p);
+               if(catagory==1)
+                {
+                    Clothes clothes = ClothUI.getInputForProduct();
+                    ProductDL.addProduct(clothes);
+                }
+               else if(catagory==2)
+                {
+                    Mobiles mobile = MobileUI.getInputForProduct();
+                    ProductDL.addProduct(mobile);
+                }
+               else
+                {
+                    Console.Write("Enter correct catagory ");
+                }
             }
 
         }
@@ -108,17 +123,17 @@ namespace Business_Application.UI
         public static void viewAllProduct()
         {
             Console.WriteLine("All Products:");
-            Console.WriteLine("----------------------------------------------------------");
-            Console.WriteLine("|   Index   |   Product Name   |   Price   |   Quantity   |");
-            Console.WriteLine("----------------------------------------------------------");
+            Console.WriteLine("---------------------------------------------------------------------");
+            Console.WriteLine("|   Index   |   Product Name   |   Price   |   Quantity   | Category |");
+            Console.WriteLine("---------------------------------------------------------------------");
 
             for (int i = 0; i < AdminDL.productList.Count; i++)
             {
                 Product item = AdminDL.productList[i];
-                Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} |");
+                Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} | {item.catagory(),-8} |");
             }
 
-            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("---------------------------------------------------------------------");
             Console.ReadKey();
         }
 

@@ -102,18 +102,17 @@ namespace Business_Application.UI
         {
 
             Console.WriteLine("View Cart");
-            Console.WriteLine("-----------------------------------------------------------");
-            Console.WriteLine("|   Index   |   Product Name   |   Price   |   Quantity   |");
-            Console.WriteLine("----------------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------------------------");
+            Console.WriteLine("|   Index   |   Product Name   |   Price   |   Quantity   | Category |   Tax   |");
+            Console.WriteLine("------------------------------------------------------------------------------");
 
-            if(UserDL.userPurchasedProductList.Count>=0)
+            if (UserDL.userPurchasedProductList.Count >= 0)
             {
                 for (int i = 0; i < UserDL.userPurchasedProductList.Count; i++)
                 {
                     Product item = UserDL.userPurchasedProductList[i];
-                    Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} |");
+                    Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} | {item.catagory(),-8} |   ${item.taxPerProduct(),-5} |");
                 }
-
             }
             else
             {
