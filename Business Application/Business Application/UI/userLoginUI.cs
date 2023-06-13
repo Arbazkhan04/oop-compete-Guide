@@ -17,8 +17,10 @@ namespace Business_Application.UI
             string password = Console.ReadLine();
             Console.Write("Enter your role (admin/user) ");
             string role = Console.ReadLine();
-            userLogin user = new userLogin(name, password, role);
-            return user;
+            
+              userLogin user = new userLogin(name, password, role);
+                return user;
+            
         }
     }
 }

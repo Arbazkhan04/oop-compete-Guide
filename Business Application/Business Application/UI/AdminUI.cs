@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -39,26 +40,30 @@ namespace Business_Application.UI
         public static void adminNavigateComp()
         {
             int opt = adminMenu();
-            while(opt!=11)
+            while (opt != 11)
             {
-                if(opt==1)
+                if (opt == 1)
                 {
                     createProduct();
                 }
-                else if(opt==2)
+                else if (opt == 2)
                 {
                     updateProduct();
                 }
-                else if(opt==3)
+                else if (opt == 3)
                 {
                     deleteProduct();
                 }
-                else if(opt==4)
+                else if (opt == 4)
                 {
                     viewAllProduct();
                 }
+                else if (opt == 5)
+                {
+                    totalSoldProduct();
+                }
                 Console.Clear();
-                 opt = adminMenu();
+                opt = adminMenu();
             }
         }
 
@@ -68,33 +73,37 @@ namespace Business_Application.UI
             int count = int.Parse(Console.ReadLine());
             Console.Write("Select Catagory(1-clothes,2-Mobile)");
             int catagory = int.Parse(Console.ReadLine());
-           
-            for(int i=count;i>0 ;i--)
+
+            for (int i = count; i > 0; i--)
             {
-               if(catagory==1)
+                if (catagory == 1)
                 {
                     Clothes clothes = ClothUI.getInputForProduct();
                     ProductDL.addProduct(clothes);
+                   
                 }
-               else if(catagory==2)
+                else if (catagory == 2)
                 {
                     Mobiles mobile = MobileUI.getInputForProduct();
                     ProductDL.addProduct(mobile);
+                    
                 }
-               else
+                else
                 {
                     Console.Write("Enter correct catagory ");
                 }
             }
+            ProductDL.storeProductDataIntoTheFile();//sotre all the object into the file
 
         }
 
         public static void updateProduct()
         {
             Product updatedProduct = ProductUI.updateProduct();
-            if(ProductDL.checkProductExist(updatedProduct))
+            if (ProductDL.checkProductExist(updatedProduct))
             {
                 ProductDL.upDateProduct(updatedProduct);
+                ProductDL.storeProductDataIntoTheFile();
                 Console.WriteLine("Product updated successfully ");
             }
             else
@@ -111,6 +120,7 @@ namespace Business_Application.UI
             if (ProductDL.checkProductExist(deleteProduct))
             {
                 ProductDL.deleteProduct(deleteProduct);
+                ProductDL.storeProductDataIntoTheFile();
                 Console.WriteLine("Product delledted successfully ");
             }
             else
@@ -137,6 +147,35 @@ namespace Business_Application.UI
             Console.ReadKey();
         }
 
+        public static void totalSoldProduct()
+        {
 
+            double tax = 0.0F;
+            int totalPrice = 0;
+            Console.WriteLine("Total Sold Products:");
+            Console.WriteLine("---------------------------------------------------------------------");
+            Console.WriteLine("|   Index   |   Product Name   |   Price   |   Quantity   | Category |");
+            Console.WriteLine("---------------------------------------------------------------------");
+
+            for (int i = 0; i < UserDL.userPurchasedProductList.Count; i++)
+            {
+                Product item = AdminDL.productList[i];
+                Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} | {item.catagory(),-8} |");
+                tax += item.taxPerProduct();
+                totalPrice += item.productPrice;
+
+            }
+
+            double reveue = tax + totalPrice;
+
+            Console.WriteLine("---------------------------------------------------------------------");
+            Console.WriteLine("|                 Total Revenue Generated =" + Math.Round(reveue, 2));
+            Console.WriteLine("---------------------------------------------------------------------");
+
+            Console.WriteLine("---------------------------------------------------------------------");
+            Console.ReadKey();
+        }
     }
 }
+
+ 

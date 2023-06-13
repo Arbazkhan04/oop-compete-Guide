@@ -19,11 +19,13 @@ namespace Business_Application
             {
                 if(opt==1)
                 {
+                    
                     singupCredentials();
                 }
                 else if(opt==2)
                 {
                     //loign 
+                    SingUpDL.laodLoginDataFromFile(); //load data from file 
                     userLogin();
                 }
 
@@ -38,7 +40,8 @@ namespace Business_Application
             SingUp user = SingUpUI.getUserSingUpData();
             if(user!=null)
             {
-              SingUpUI.addUserIntoLsit(user);
+               SingUpDL.storeLoginDataIntoTheFile(user);//store data into file
+               SingUpUI.addUserIntoLsit(user);
             }
           
         }
@@ -48,6 +51,7 @@ namespace Business_Application
             userLogin user = userLoginUI.getUserLoginData();
             if(SingUpDL.userExist(user))
             {
+                ProductDL.laodProductDataFromFile();
                 if(user.role=="user")
                 {
                     // navigate toward user;
@@ -56,6 +60,7 @@ namespace Business_Application
                 else if(user.role=="admin")
                 {
                    AdminUI.adminNavigateComp();
+
                     //navigate toward admin
                 }
             }

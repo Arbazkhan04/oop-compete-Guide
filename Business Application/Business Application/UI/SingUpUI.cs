@@ -23,12 +23,13 @@ namespace Business_Application.UI
             if(role=="admin")
             {
                
-                 SingUp admin = new SingUp(name, password,role);
+                SingUp admin = new SingUp(name, password,role);
                 if (SingUpDL.isAdminAlreadyResitered(admin))
                 {
                     Console.WriteLine("Admin alreaedy regsitered..");
                     return null;
                 }
+
                 return admin;
             }
 

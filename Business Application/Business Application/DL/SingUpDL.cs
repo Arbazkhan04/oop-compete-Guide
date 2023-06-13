@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Business_Application.DL
 {
@@ -42,5 +44,43 @@ namespace Business_Application.DL
             }
             return false;
         }
+
+       public static void storeLoginDataIntoTheFile(SingUp user)
+        {
+            String path = "C:\\Users\\Arbaz khan\\Desktop\\oop-compete-Guide\\Business Application\\Business Application\\DL\\Auth.txt";
+            StreamWriter file = new StreamWriter(path, true);
+
+            file.WriteLine(user.name + "," + user.password+ "," + user.role);
+            file.Flush();
+            file.Close();
+        }
+
+        public static void laodLoginDataFromFile()
+        {
+                String path = "C:\\Users\\Arbaz khan\\Desktop\\oop-compete-Guide\\Business Application\\Business Application\\DL\\Auth.txt";
+                if (File.Exists(path))
+                {
+                    StreamReader file = new StreamReader(path);
+                    String record;
+                    while ((record = file.ReadLine()) != null)
+                    {
+                     string[] data = record.Split(',');
+                     SingUp user = new SingUp(data[0], data[1], data[2]);
+                     userList.Add(user);
+                     foreach(SingUp u in userList)
+                    {
+                        Console.WriteLine(u.name + u.password + u.role);
+                    }
+                    }
+
+                    file.Close();
+                }
+                else
+                {
+                    Console.Write("Path not exist ");
+                }
+
+        }
+        
     }
 }

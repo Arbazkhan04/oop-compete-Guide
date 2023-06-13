@@ -111,7 +111,7 @@ namespace Business_Application.UI
                 for (int i = 0; i < UserDL.userPurchasedProductList.Count; i++)
                 {
                     Product item = UserDL.userPurchasedProductList[i];
-                    Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} | {item.catagory(),-8} |   ${item.taxPerProduct(),-5} |");
+                    Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} | {item.catagory(),-8} |   ${Math.Round(item.taxPerProduct(),2),-5} |");
                 }
             }
             else
