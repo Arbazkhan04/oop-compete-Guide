@@ -56,11 +56,21 @@ namespace Business_Application.UI
                 }
                 else if (opt == 4)
                 {
+                   
                     viewAllProduct();
+                    Console.ReadKey();
                 }
                 else if (opt == 5)
                 {
                     totalSoldProduct();
+                }
+                else if(opt==6)
+                {
+                    totalUserList();
+                }
+                else if(opt==7)
+                {
+                    productAnalystics();
                 }
                 Console.Clear();
                 opt = adminMenu();
@@ -144,7 +154,7 @@ namespace Business_Application.UI
             }
 
             Console.WriteLine("---------------------------------------------------------------------");
-            Console.ReadKey();
+           
         }
 
         public static void totalSoldProduct()
@@ -174,6 +184,36 @@ namespace Business_Application.UI
 
             Console.WriteLine("---------------------------------------------------------------------");
             Console.ReadKey();
+        }
+
+        public static void totalUserList()
+        {
+            if(SingUpDL.userList.Count>0)
+            {
+                Console.WriteLine("Total Sold Products:");
+                Console.WriteLine("----------------------------------------------------------------");
+                Console.WriteLine("|   Index   |   user Name   |   user password   |   user Role  |");
+                Console.WriteLine("----------------------------------------------------------------");
+
+               for(int i=0;i<SingUpDL.userList.Count;i++)
+                {
+                    SingUp user = SingUpDL.userList[i];
+                    Console.WriteLine($"|   {i,-8} |   {user.name,-15} |   {user.password,-7} |   {user.role,-10} |");
+
+                }
+                Console.WriteLine("-----------------------------------------------------------------");
+            }
+            else
+            {
+                Console.WriteLine("No user !");
+            }
+
+            Console.ReadKey();
+        }
+
+        public static void productAnalystics()
+        {
+            //start form here
         }
     }
 }

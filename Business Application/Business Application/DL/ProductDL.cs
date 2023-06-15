@@ -78,7 +78,7 @@ namespace Business_Application.DL
 
         public static void storeProductDataIntoTheFile()
         {
-            String path = "C:\\Users\\Arbaz khan\\Desktop\\oop-compete-Guide\\Business Application\\Business Application\\DL\\product.txt";
+            String path = "Product.txt";
             StreamWriter file = new StreamWriter(path, false);
 
             foreach(Product p in AdminDL.productList)
@@ -92,7 +92,7 @@ namespace Business_Application.DL
 
         public static void laodProductDataFromFile()
         {
-            String path = "C:\\Users\\Arbaz khan\\Desktop\\oop-compete-Guide\\Business Application\\Business Application\\DL\\product.txt";
+            String path = "Product.txt";
             if (File.Exists(path))
             {
                 StreamReader file = new StreamReader(path);
@@ -130,7 +130,7 @@ namespace Business_Application.DL
 
         }
 
-        static String parseData(string data, int line)
+        public static String parseData(string data, int line)
         {
             int commaCount = 1;
             String item = "";

@@ -13,6 +13,8 @@ namespace Business_Application
     {
         static void Main(string[] args)
         {
+            SingUpDL.laodLoginDataFromFile();
+
             MainScreen.eCommerenceTitle();
             int opt=MainScreen.displaySinupAndSinginMenu();
             while(opt!=3)
@@ -25,7 +27,7 @@ namespace Business_Application
                 else if(opt==2)
                 {
                     //loign 
-                    SingUpDL.laodLoginDataFromFile(); //load data from file 
+                   // SingUpDL.laodLoginDataFromFile(); //load data from file 
                     userLogin();
                 }
 
@@ -40,8 +42,9 @@ namespace Business_Application
             SingUp user = SingUpUI.getUserSingUpData();
             if(user!=null)
             {
-               SingUpDL.storeLoginDataIntoTheFile(user);//store data into file
+              // SingUpDL.laodLoginDataFromFile(); //first load data from the file into the list 
                SingUpUI.addUserIntoLsit(user);
+               SingUpDL.storeLoginDataIntoTheFile();//store data into file
             }
           
         }
@@ -51,6 +54,7 @@ namespace Business_Application
             userLogin user = userLoginUI.getUserLoginData();
             if(SingUpDL.userExist(user))
             {
+                UserDL.loadPurchasedData();
                 ProductDL.laodProductDataFromFile();
                 if(user.role=="user")
                 {

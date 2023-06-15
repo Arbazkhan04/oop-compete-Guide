@@ -6,3 +6,11 @@ C:\Users\Arbaz khan\Desktop\oop-compete-Guide\Business Application\Business Appl
 C:\Users\Arbaz khan\Desktop\oop-compete-Guide\Business Application\Business Application\obj\Debug\Business Application.csproj.CoreCompileInputs.cache
 C:\Users\Arbaz khan\Desktop\oop-compete-Guide\Business Application\Business Application\obj\Debug\Business Application.exe
 C:\Users\Arbaz khan\Desktop\oop-compete-Guide\Business Application\Business Application\obj\Debug\Business Application.pdb
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Business Application\Business Application\bin\Debug\Business Application.exe.config
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Business Application\Business Application\bin\Debug\Business Application.exe
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Business Application\Business Application\bin\Debug\Business Application.pdb
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Business Application\Business Application\obj\Debug\Business Application.csproj.AssemblyReference.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Business Application\Business Application\obj\Debug\Business Application.csproj.SuggestedBindingRedirects.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Business Application\Business Application\obj\Debug\Business Application.csproj.CoreCompileInputs.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Business Application\Business Application\obj\Debug\Business Application.exe
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Business Application\Business Application\obj\Debug\Business Application.pdb

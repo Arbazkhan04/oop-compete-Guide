@@ -9,8 +9,6 @@ namespace Business_Application.UI
 {
     public class ProductUI
     {
-       
-
         public static Product  updateProduct()
         {
             Console.Write("Enter the name of the updated product ");

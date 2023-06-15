@@ -45,33 +45,39 @@ namespace Business_Application.DL
             return false;
         }
 
-       public static void storeLoginDataIntoTheFile(SingUp user)
+       public static void storeLoginDataIntoTheFile()
         {
-            String path = "C:\\Users\\Arbaz khan\\Desktop\\oop-compete-Guide\\Business Application\\Business Application\\DL\\Auth.txt";
-            StreamWriter file = new StreamWriter(path, true);
-
-            file.WriteLine(user.name + "," + user.password+ "," + user.role);
+            String path = "Auth.txt";
+            StreamWriter file = new StreamWriter(path, false);
+            foreach(SingUp user in userList)
+            {
+              file.WriteLine(user.name + "," + user.password+ "," + user.role);
+            }
             file.Flush();
             file.Close();
         }
 
         public static void laodLoginDataFromFile()
         {
-                String path = "C:\\Users\\Arbaz khan\\Desktop\\oop-compete-Guide\\Business Application\\Business Application\\DL\\Auth.txt";
+                String path = "Auth.txt";
                 if (File.Exists(path))
                 {
                     StreamReader file = new StreamReader(path);
                     String record;
-                    while ((record = file.ReadLine()) != null)
+                while ((record = file.ReadLine()) != null)
+                {
+                    string[] data = record.Split(',');
+                    if(data.Length>=3)
                     {
-                     string[] data = record.Split(',');
-                     SingUp user = new SingUp(data[0], data[1], data[2]);
-                     userList.Add(user);
+                    SingUp user = new SingUp(data[0], data[1], data[2]);
+                    userList.Add(user);
+                    }
+                }
                      foreach(SingUp u in userList)
                     {
-                        Console.WriteLine(u.name + u.password + u.role);
+                         Console.WriteLine(u.name + u.password + u.role);
                     }
-                    }
+                    
 
                     file.Close();
                 }
