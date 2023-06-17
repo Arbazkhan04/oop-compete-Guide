@@ -29,7 +29,7 @@ namespace Business_Application.UI
             Console.WriteLine("  8 Exit                                              ");
             Console.Write("Enter option: ");
 
-            int opt = int.Parse(Console.ReadLine());
+            int opt = ValidationUI.EnterOption(8);
             return opt;
 
         }
@@ -79,18 +79,43 @@ namespace Business_Application.UI
         {
             AdminUI.viewAllProduct();
             Console.Write("Enter the index of the product you want to buy");
-            int index = int.Parse(Console.ReadLine());
-            Product purchaseProduct = ProductDL.getProdcutByIndex(index);
-            if(purchaseProduct!=null)
+            int index = ValidationUI.EnterOption(AdminDL.productList.Count);
+            Console.Write("Enter quatnity you wnato to buy ");
+            int quantity = ValidationUI.EnterOption(10000);
+            if (!(quantity > AdminDL.productList[index].productQuantity))
             {
-                Console.WriteLine(purchaseProduct.productName + purchaseProduct.productPrice + purchaseProduct.productQuantity);
-                 UserDL.addPurchasedProduct(purchaseProduct);
-                UserDL.storePurchasedProductIntoTheFile(purchaseProduct);
+                Product ExistProduct = ProductDL.getProdcutByIndex(index);
+                if (ExistProduct != null)
+                {
 
+
+                    if (ExistProduct.catagory() == "clothes")
+                    {
+                        Clothes cloth = new Clothes(ExistProduct.productName, ExistProduct.productPrice, quantity);
+                        Console.Write("Product Purchased Successfully");
+                        UserDL.addPurchasedProduct(cloth);
+                        UserDL.storePurchasedProductIntoTheFile(cloth);
+                    }
+                    else if (ExistProduct.catagory() == "Mobiles")
+                    {
+                        Mobiles moboile = new Mobiles(ExistProduct.productName, ExistProduct.productPrice, quantity);
+                        Console.Write("Product Purchased Successfully");
+                        UserDL.addPurchasedProduct(moboile);
+                        UserDL.storePurchasedProductIntoTheFile(moboile);
+                    }
+
+                    //update the product list as well bexause the quantity is deascreing
+                    ProductDL.updateProductListQuantity(index, quantity);
+                    ProductDL.storeProductDataIntoTheFile();
+                }
+           
             }
-
+            else
+            {
+                Console.Write("Your selected quantity is greatter than availabe quaintiy");
+            }
+            
             Console.ReadKey();
-
 
         }
 
@@ -102,11 +127,17 @@ namespace Business_Application.UI
             
             if(products.Count>=0)
             {
-                foreach(Product p in products)
+                Console.WriteLine("filtered product");
+                Console.WriteLine("---------------------------------------------------------------------");
+                Console.WriteLine("|   Index   |   Product Name   |   Price   |   Quantity   | Category |");
+                Console.WriteLine("---------------------------------------------------------------------");
+                for(int i=0;i<products.Count;i++)
                 {
-                    Console.WriteLine(p.productName+p.productPrice+p.productQuantity);
-
+                    Product item = products[i];
+                    Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} | {item.catagory(),-8} |");
                 }
+                Console.WriteLine("-----------------------------------------------------------------");
+
             }
 
             Console.ReadKey();
@@ -151,7 +182,6 @@ namespace Business_Application.UI
                 {
                     if (i > 3)
                     {
-                        Console.ReadKey();
                         break;
                     }
 
@@ -169,11 +199,11 @@ namespace Business_Application.UI
                if(wantToBuy)
                 {
                     Console.Write("Enter the index of the product you want to buy");
-                    int index = int.Parse(Console.ReadLine());
+                    int index = ValidationUI.EnterOption(AdminDL.productList.Count);
                     Product purchaseProduct = UserDL.getTrendingProduct(index);
                     if (purchaseProduct != null)
                     {
-                        Console.WriteLine(purchaseProduct.productName + purchaseProduct.productPrice + purchaseProduct.productQuantity);
+                        Console.Write("Successfully Purchased product");
                         UserDL.addPurchasedProduct(purchaseProduct);
                         UserDL.storePurchasedProductIntoTheFile(purchaseProduct);
                     }
@@ -186,9 +216,6 @@ namespace Business_Application.UI
                 {
                     Console.WriteLine("okay!");
                 }
-
-
-
 
             }
             else
@@ -216,6 +243,7 @@ namespace Business_Application.UI
             {
                 Console.Write("Enter your correct crendentials");
             }
+            Console.ReadKey();
 
         }
 
@@ -235,6 +263,8 @@ namespace Business_Application.UI
             {
                 Console.Write("Enter your correct crendentials");
             }
+
+            Console.ReadKey();
         }
     }
 }

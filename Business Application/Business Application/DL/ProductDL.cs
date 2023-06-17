@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Xml;
 
 namespace Business_Application.DL
 {
@@ -103,21 +104,20 @@ namespace Business_Application.DL
                     int pPrice = int.Parse(parseData(record, 2));
                     int pQuantity = int.Parse(parseData(record, 3));
                     string pCatagory = parseData(record, 4);
-                  //  double pTax = double.Parse(parseData(record, 5));
-                    if(pCatagory=="Mobile")
+                    //  double pTax = double.Parse(parseData(record, 5));
+                    if (pCatagory == "Mobile")
                     {
                         Mobiles mobile = new Mobiles(pName, pPrice, pQuantity);
+                        
                         addProduct(mobile);//add product into file
+                        
                     }
-                    else if(pCatagory=="clothes")
+                    else if (pCatagory == "clothes")
                     {
                         Clothes cloth = new Clothes(pName, pPrice, pQuantity);
-                        addProduct(cloth);  
-                    }
-
-                    foreach (Product p in AdminDL.productList)
-                    {
-                        Console.WriteLine(p.productName + "," + p.productPrice + "," + p.productQuantity + "," + p.catagory() + "," + p.taxPerProduct());
+                        
+                        addProduct(cloth);
+                        
                     }
                 }
 
@@ -146,6 +146,11 @@ namespace Business_Application.DL
                 }
             }
             return item;
+        }
+
+        public static void updateProductListQuantity(int index, int quantity)
+        {
+            AdminDL.productList[index].productQuantity -= quantity;
         }
 
     }

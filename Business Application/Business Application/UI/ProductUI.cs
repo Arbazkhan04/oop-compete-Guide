@@ -15,10 +15,10 @@ namespace Business_Application.UI
             string pName = Console.ReadLine();
 
             Console.Write("Enter  price for update product");
-            int pPrice = int.Parse(Console.ReadLine());
+            int pPrice = ValidationUI.EnterOption(10000);
 
             Console.Write("Enter  Quantity for update product");
-            int pQuantity = int.Parse(Console.ReadLine());
+            int pQuantity = ValidationUI.EnterOption(10000);
 
             Product p = new Product(pName, pPrice, pQuantity);
 
@@ -31,10 +31,10 @@ namespace Business_Application.UI
             string pName = Console.ReadLine();
 
             Console.Write("Enter  price for deleted product");
-            int pPrice = int.Parse(Console.ReadLine());
+            int pPrice = ValidationUI.EnterOption(10000);
 
             Console.Write("Enter  Quantity for deleted product");
-            int pQuantity = int.Parse(Console.ReadLine());
+            int pQuantity = ValidationUI.EnterOption(10000);
 
             Product p = new Product(pName, pPrice, pQuantity);
 

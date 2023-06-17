@@ -14,6 +14,8 @@ namespace Business_Application
         static void Main(string[] args)
         {
             SingUpDL.laodLoginDataFromFile();
+            UserDL.loadPurchasedData();
+            ProductDL.laodProductDataFromFile();
 
             MainScreen.eCommerenceTitle();
             int opt=MainScreen.displaySinupAndSinginMenu();
@@ -30,7 +32,7 @@ namespace Business_Application
                    // SingUpDL.laodLoginDataFromFile(); //load data from file 
                     userLogin();
                 }
-
+                Console.Clear();
                 MainScreen.eCommerenceTitle();
                 opt = MainScreen.displaySinupAndSinginMenu();
             }
@@ -54,16 +56,16 @@ namespace Business_Application
             userLogin user = userLoginUI.getUserLoginData();
             if(SingUpDL.userExist(user))
             {
-                UserDL.loadPurchasedData();
-                ProductDL.laodProductDataFromFile();
                 if(user.role=="user")
                 {
                     // navigate toward user;
+                    Console.Clear();
                     UserUI.userNavigationComp();
                 }
                 else if(user.role=="admin")
                 {
-                   AdminUI.adminNavigateComp();
+                    Console.Clear();
+                    AdminUI.adminNavigateComp();
 
                     //navigate toward admin
                 }

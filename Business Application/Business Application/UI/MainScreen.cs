@@ -8,7 +8,6 @@ namespace Business_Application.UI
 {
     public class MainScreen
     {
-
         public static void eCommerenceTitle()
         {
             Console.WriteLine("#################################################################################");
@@ -28,7 +27,7 @@ namespace Business_Application.UI
             Console.WriteLine("#  Select an option                                     #");
             Console.WriteLine("#########################################################");
             Console.Write("Enter option: ");
-            int opt = int.Parse(Console.ReadLine());
+            int opt = ValidationUI.EnterOption(3);
             return  opt;
         }
   

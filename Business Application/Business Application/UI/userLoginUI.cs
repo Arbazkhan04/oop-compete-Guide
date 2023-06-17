@@ -22,5 +22,15 @@ namespace Business_Application.UI
                 return user;
             
         }
+
+        public static  userLogin  getDataForAdminUpdateCrendentials()
+        {
+            Console.Write("Enter name ");
+            string username = Console.ReadLine();
+            Console.Write("Enter password ");
+            string password = Console.ReadLine();
+            userLogin user = new userLogin(username, password, "admin");
+            return user;
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace Business_Application.UI
             Console.WriteLine("  11 Exit                                              ");
             Console.Write("Enter option: ");
 
-            int opt = int.Parse(Console.ReadLine());
+            int opt =ValidationUI.EnterOption(11);
             return opt;
         }
 
@@ -72,6 +72,19 @@ namespace Business_Application.UI
                 {
                     productAnalystics();
                 }
+                else if(opt==8)
+                {
+                    productDetail();
+                }
+
+                else if(opt==9)
+                {
+                    changeProfileSetting();
+                }
+                else if(opt==10)
+                {
+                    deeteAdmin();
+                }
                 Console.Clear();
                 opt = adminMenu();
             }
@@ -79,10 +92,11 @@ namespace Business_Application.UI
 
         public static void createProduct()
         {
+           
             Console.Write("How many product you want to enter ");
-            int count = int.Parse(Console.ReadLine());
+            int count = ValidationUI.EnterOption(10);
             Console.Write("Select Catagory(1-clothes,2-Mobile)");
-            int catagory = int.Parse(Console.ReadLine());
+            int catagory = ValidationUI.EnterOption(2);
 
             for (int i = count; i > 0; i--)
             {
@@ -109,6 +123,8 @@ namespace Business_Application.UI
 
         public static void updateProduct()
         {
+            Console.Clear();
+            viewAllProduct();
             Product updatedProduct = ProductUI.updateProduct();
             if (ProductDL.checkProductExist(updatedProduct))
             {
@@ -190,7 +206,7 @@ namespace Business_Application.UI
         {
             if(SingUpDL.userList.Count>0)
             {
-                Console.WriteLine("Total Sold Products:");
+                Console.WriteLine("Total user list:");
                 Console.WriteLine("----------------------------------------------------------------");
                 Console.WriteLine("|   Index   |   user Name   |   user password   |   user Role  |");
                 Console.WriteLine("----------------------------------------------------------------");
@@ -214,8 +230,185 @@ namespace Business_Application.UI
         public static void productAnalystics()
         {
             //start form here
+            Console.Clear();
+            Console.WriteLine("\n");
+            Console.WriteLine("**********************************************************************************");
+            Console.WriteLine("******************************  Welcome to the Product Analytics  ****************");
+            Console.WriteLine("**********************************************************************************");
+
+           
+            //show top the highest sold product 
+            List<Product> topThreeProduct = UserDL.getTopThreeSoldProduct();
+            if (topThreeProduct == null)
+            {
+                Console.WriteLine("Due to the less data We can't commpare");
+            }
+            else
+            {
+                barChar();
+                for (int i = 0; i < topThreeProduct.Count; i++)
+                {
+                    if (i == 3)
+                    {
+                        break;
+                    }
+                    if(i==0)
+                    {
+                        Console.SetCursorPosition(5, 13);
+                        Console.Write(topThreeProduct[i].productName);
+                        Console.SetCursorPosition(17, 13);
+                        Console.Write(topThreeProduct[i+1].productName);
+                        Console.SetCursorPosition(28, 13);
+                        Console.WriteLine(topThreeProduct[i+2].productName);
+                    }
+                 
+
+
+                }
+                //show top product in tabular form
+                Console.WriteLine("Top Sold Products:");
+                Console.WriteLine("---------------------------------------------------------------------");
+                Console.WriteLine("|   Index   |   Product Name   |   Price   |   Quantity   | Category |");
+                Console.WriteLine("---------------------------------------------------------------------");
+
+                for (int i=0;i<topThreeProduct.Count;i++)
+                {
+                    if(i==3)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        if (i != 3)
+                        {
+                            Product item = topThreeProduct[i];
+                            Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} | {item.catagory(),-8} |");
+                        }
+                    }
+                }
+                    Console.WriteLine("-----------------------------------------------------------------");
+            }
+
+
+
+            Console.ReadKey();
+        }
+
+        public static void barChar()
+        {
+            char box = '\u2588';
+
+            for (int i = 0; i < 7; i++)
+            {
+                Console.WriteLine("|" + new string(' ', 10));
+            }
+
+            Console.WriteLine(new string('-', 30));
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.SetCursorPosition(5, 11 - i);
+                Console.Write(box);
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.SetCursorPosition(16, 11 - i);
+                Console.Write(box);
+            }
+
+            for (int i = 0; i < 2; i++)
+            {
+                Console.SetCursorPosition(27, 11 - i);
+                Console.Write(box);
+            }
+            Console.WriteLine();
+        }
+
+
+
+        public static void productDetail()
+        {
+            
+            Console.WriteLine("************************************************************************");
+            Console.WriteLine("*                              Product Detail                          *");
+            Console.WriteLine("************************************************************************");
+
+            Console.WriteLine("---------------------------------------------------------------------");
+            Console.WriteLine("|   Index   |   Product Name   |   Price   |   Quantity   |   Stock  |");
+            Console.WriteLine("---------------------------------------------------------------------");
+
+            for(int i = 0; i < AdminDL.productList.Count;i++)
+            {
+                Product item = AdminDL.productList[i];
+                string productStock = item.productQuantity > 0 ? "In Stock" : "Out of Stock";
+                Console.ForegroundColor = item.productQuantity > 0 ? ConsoleColor.Green : ConsoleColor.Red;
+                Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} {item.productQuantity,-10} | {productStock,-8} |");
+
+            }
+            Console.Write("Do you want to add more product(y/n)");
+            char addMoreProduct = char.Parse(Console.ReadLine());
+            if(addMoreProduct=='y')
+            {
+                Console.Write("Enter Index of the product you want to update");
+                int index = int.Parse(Console.ReadLine());
+                Product updateTheProduct = ProductDL.getProdcutByIndex(index);
+                if(updateTheProduct!=null)
+                {
+                Console.Write("Enter the Quantity you want to update");
+                int updatedQuantity = int.Parse(Console.ReadLine());
+                AdminDL.productList[index].productQuantity = updatedQuantity;
+
+                    //update the product file as well 
+                    ProductDL.storeProductDataIntoTheFile();
+                }
+                else
+                {
+                    Console.WriteLine("Enter the correct index");
+                }
+
+            }
+            Console.ReadKey();
+        }
+
+
+        public static void changeProfileSetting()
+        {
+            Console.Write("Enter your name ");
+            string name = Console.ReadLine();
+            Console.Write("Enter your password ");
+            string password = Console.ReadLine();
+            userLogin user = new userLogin(name, password, "admin");
+            if (SingUpDL.userExist(user))
+            {
+                UserDL.udpateAdmin(user);
+                SingUpDL.storeLoginDataIntoTheFile();//udpate the file
+            }
+            else
+            {
+                Console.Write("Enter your correct crendentials");
+            }
+        }
+
+        public static void deeteAdmin()
+        {
+            Console.Write("Enter your name ");
+            string name = Console.ReadLine();
+            Console.Write("Enter your password ");
+            string password = Console.ReadLine();
+            userLogin user = new userLogin(name, password, "admin");
+            if (SingUpDL.userExist(user))
+            {
+                UserDL.deleteUserAccount(user);
+                SingUpDL.storeLoginDataIntoTheFile();//udpate the file
+            }
+            else
+            {
+                Console.Write("Enter your correct crendentials");
+            }
         }
     }
 }
+
 
  

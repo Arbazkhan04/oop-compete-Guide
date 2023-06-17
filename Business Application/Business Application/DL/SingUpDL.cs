@@ -73,12 +73,7 @@ namespace Business_Application.DL
                     userList.Add(user);
                     }
                 }
-                     foreach(SingUp u in userList)
-                    {
-                         Console.WriteLine(u.name + u.password + u.role);
-                    }
-                    
-
+                   
                     file.Close();
                 }
                 else

@@ -58,6 +58,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\AdminUI.cs" />
+    <Compile Include="UI\ValidationUI.cs" />
     <Compile Include="UI\ClothUI.cs" />
     <Compile Include="UI\MainScreen.cs" />
     <Compile Include="UI\MobileUI.cs" />

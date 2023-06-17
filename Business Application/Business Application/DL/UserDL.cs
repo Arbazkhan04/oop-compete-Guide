@@ -17,7 +17,13 @@ namespace Business_Application.DL
         {
             userPurchasedProductList.Add(p);
         }
+        public static List<Product> getTopThreeSoldProduct()
+        {
+            List<Product> product;
+            product = userPurchasedProductList.OrderByDescending(p => p.productQuantity).ToList();
+            return product.Count<3 ? null:product;
 
+        }
         public static void storePurchasedProductIntoTheFile(Product p)
         {
             String path = "Purchased.txt";
@@ -46,11 +52,14 @@ namespace Business_Application.DL
                     {
                         Mobiles mobile = new Mobiles(pName, pPrice, pQuantity);
                         addPurchasedProduct(mobile);//add product into file
+                        
                     }
                     else if (pCatagory == "clothes")
                     {
                         Clothes cloth = new Clothes(pName, pPrice, pQuantity);
+                      
                         addPurchasedProduct(cloth);
+                        
                     }
                 }
 
@@ -78,10 +87,27 @@ namespace Business_Application.DL
                     SingUp updatedUser = SingUpUI.getUserSingUpData();
                     u.name = updatedUser.name;
                     u.password = updatedUser.password;
-                    u.role = "user";
+                    u.role = user.role;
                 }
             }
         }
+
+        public static void udpateAdmin(userLogin user)
+        {
+            foreach (SingUp u in SingUpDL.userList)
+            {
+                if (user.name == u.name && user.pasword == u.password && user.role == u.role)
+                {
+                    Console.WriteLine("now update your crendentials");
+                    userLogin updatedUser = userLoginUI.getDataForAdminUpdateCrendentials();
+                    u.name = updatedUser.name;
+                    u.password = updatedUser.pasword;
+                    u.role = user.role;
+                }
+            }
+        }
+
+
 
         public static void deleteUserAccount(userLogin u)
         {

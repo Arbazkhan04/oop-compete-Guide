@@ -15,10 +15,10 @@ namespace Business_Application.UI
             string pName = Console.ReadLine();
 
             Console.Write("Enter product price");
-            int pPrice = int.Parse(Console.ReadLine());
+            int pPrice = ValidationUI.EnterOption(10000);
 
             Console.Write("Enter product Quantity");
-            int pQuantity = int.Parse(Console.ReadLine());
+            int pQuantity = ValidationUI.EnterOption(10000);
 
             Mobiles p = new Mobiles(pName, pPrice, pQuantity);
 
