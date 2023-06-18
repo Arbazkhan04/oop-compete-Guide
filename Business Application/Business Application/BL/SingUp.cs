@@ -8,12 +8,9 @@ namespace Business_Application.BL
 {
     public class SingUp
     {
-        public string name;
-        public string password;
-        public string role;
-
-
-
+         private string name;
+         private string password;
+         private string role;
         public SingUp(string name, string password)//user
         {
             this.name = name;
@@ -27,9 +24,39 @@ namespace Business_Application.BL
             this.password = password;
             this.role = role;
         }
+        public bool setName(string name)
+        {
+            if(!string.IsNullOrEmpty(name))
+            {
+                this.name = name;
+                return true;
+            }
+            
+            return false;
+        }
+        public bool setPassword(string password)
+        {
+            if (!string.IsNullOrEmpty(password) || password!=" ")
+            {
+                this.password = password;
+                return true;
+            }
+            return false;
+        }
 
+        public bool setRole(string role)
+        {
+            if(role=="admin"||role=="user")
+            {
+                this.role = role;
+                return true;
+            }
+            return false;
+        }
 
-
+        public string getName() { return this.name;}
+        public string getPassword() { return this.password; }
+        public string getRole() { return this.role; }
 
     }
 }

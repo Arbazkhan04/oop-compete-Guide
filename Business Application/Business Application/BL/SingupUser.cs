@@ -6,15 +6,8 @@ using System.Threading.Tasks;
 
 namespace Business_Application.BL
 {
-    public class SingupUser:SingUp
+    public class SingupUser
     {
-        public string role;
-
-        public SingupUser(string name,string password) : base(name, password)
-        {
-            this.name = name;
-            this.password = password;
-            this.role = "user";
-        }
+       
     }
 }

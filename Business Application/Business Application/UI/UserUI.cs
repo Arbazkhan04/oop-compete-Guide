@@ -94,14 +94,14 @@ namespace Business_Application.UI
                         Clothes cloth = new Clothes(ExistProduct.productName, ExistProduct.productPrice, quantity);
                         Console.Write("Product Purchased Successfully");
                         UserDL.addPurchasedProduct(cloth);
-                        UserDL.storePurchasedProductIntoTheFile(cloth);
+                        UserDL.storePurchasedProductIntoTheFile();
                     }
                     else if (ExistProduct.catagory() == "Mobiles")
                     {
                         Mobiles moboile = new Mobiles(ExistProduct.productName, ExistProduct.productPrice, quantity);
                         Console.Write("Product Purchased Successfully");
                         UserDL.addPurchasedProduct(moboile);
-                        UserDL.storePurchasedProductIntoTheFile(moboile);
+                        UserDL.storePurchasedProductIntoTheFile();
                     }
 
                     //update the product list as well bexause the quantity is deascreing
@@ -205,7 +205,7 @@ namespace Business_Application.UI
                     {
                         Console.Write("Successfully Purchased product");
                         UserDL.addPurchasedProduct(purchaseProduct);
-                        UserDL.storePurchasedProductIntoTheFile(purchaseProduct);
+                        UserDL.storePurchasedProductIntoTheFile();
                     }
                     else
                     {
@@ -268,3 +268,4 @@ namespace Business_Application.UI
         }
     }
 }
+

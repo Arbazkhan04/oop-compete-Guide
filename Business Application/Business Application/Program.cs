@@ -48,6 +48,11 @@ namespace Business_Application
                SingUpUI.addUserIntoLsit(user);
                SingUpDL.storeLoginDataIntoTheFile();//store data into file
             }
+            else
+            {
+                Console.WriteLine("Enter correect crendienals;");
+                Console.ReadKey();
+            }
           
         }
 

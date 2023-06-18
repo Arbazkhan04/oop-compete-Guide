@@ -214,7 +214,7 @@ namespace Business_Application.UI
                for(int i=0;i<SingUpDL.userList.Count;i++)
                 {
                     SingUp user = SingUpDL.userList[i];
-                    Console.WriteLine($"|   {i,-8} |   {user.name,-15} |   {user.password,-7} |   {user.role,-10} |");
+                    Console.WriteLine($"|   {i,-8} |   {user.getName(),-15} |   {user.getPassword(),-7} |   {user.getRole(),-10} |");
 
                 }
                 Console.WriteLine("-----------------------------------------------------------------");

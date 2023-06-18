@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace Business_Application.BL
 {
-    public class SingUpAdmin:SingUp
+    public class SingUpAdmin
     {
-        public string role;
-        public SingUpAdmin(string name,string password):base(name,password)
-        {
-            this.name = name;
-            this.password = password;
-            this.role = "admin";
-        }
+      
     }
 }

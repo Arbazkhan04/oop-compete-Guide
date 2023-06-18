@@ -25,7 +25,7 @@ namespace Business_Application.DL
 
             foreach(SingUp users in  userList)
             {
-                if(users.role==user.role)
+                if(users.getRole()==user.getRole())
                 {
                     count++;
                 }
@@ -37,7 +37,7 @@ namespace Business_Application.DL
         {
             foreach(SingUp user in userList)
             {
-                if(user.name==lUser.name && user.password==lUser.pasword && user.role==lUser.role)
+                if(user.getName()==lUser.name && user.getPassword()==lUser.pasword && user.getRole()==lUser.role)
                 {
                     return true;
                 }
@@ -51,7 +51,7 @@ namespace Business_Application.DL
             StreamWriter file = new StreamWriter(path, false);
             foreach(SingUp user in userList)
             {
-              file.WriteLine(user.name + "," + user.password+ "," + user.role);
+              file.WriteLine(user.getName() + "," + user.getPassword()+ "," + user.getRole());
             }
             file.Flush();
             file.Close();

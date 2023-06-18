@@ -24,6 +24,9 @@ namespace Business_Application.UI
             {
                
                 SingUp admin = new SingUp(name, password,role);
+                if(admin.setName(name) && admin.setPassword(password) && admin.setRole(role))
+                {
+
                 if (SingUpDL.isAdminAlreadyResitered(admin))
                 {
                     Console.WriteLine("Admin alreaedy regsitered..");
@@ -31,10 +34,16 @@ namespace Business_Application.UI
                 }
 
                 return admin;
+                }
+                return null;
             }
 
             SingUp user = new SingUp(name, password);
-            return user;
+            if (user.setName(name) && user.setPassword(password))
+            {
+                return user;
+            }
+                return null;
 
         }
 
