@@ -60,6 +60,8 @@
     <Compile Include="BL\GameGrid.cs" />
     <Compile Include="BL\gameObject.cs" />
     <Compile Include="BL\GameObjectType.cs" />
+    <Compile Include="BL\Ghost.cs" />
+    <Compile Include="BL\HorizantalGhost.cs" />
     <Compile Include="BL\PacmanPlayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

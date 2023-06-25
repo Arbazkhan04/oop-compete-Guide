@@ -14,9 +14,15 @@ namespace PacMan
         {
             GameGrid grid = new GameGrid("maze.txt", 24, 71);
             GameCell start = new GameCell(15, 11,grid);
+            GameCell hGhostStart = new GameCell(1, 2, grid);//game cell for horizanttla ghsot
             PacmanPlayer player = new PacmanPlayer('P', start);//inheritaning the game object class 
+
+            HorizantalGhost hGhost = new HorizantalGhost('G', hGhostStart);
+
             printMaze(grid);
             printPlayer(player);
+            printPlayer(hGhost);
+           
 
             bool gameRunning = true;
             while(gameRunning)
@@ -45,8 +51,7 @@ namespace PacMan
                     moveGameObject(player, GameDirection.Right);
 
                 }
-
-
+                moveHorizantalGhost(hGhost);
             }
 
             Console.ReadKey();
@@ -91,6 +96,21 @@ namespace PacMan
                 }
                
             
+        }
+
+         static void moveHorizantalGhost(gameObject hGhostStart)
+        {
+          
+            GameCell nextCell = hGhostStart.CurrentCell.nextCell(GameDirection.Right);
+            if (nextCell!=null)
+            {
+                gameObject newGameObject = new gameObject(GameObjectType.None, ' ');
+                GameCell currentCell = hGhostStart.CurrentCell;
+                clearContent(currentCell, newGameObject);
+                hGhostStart.CurrentCell = nextCell;
+                printPlayer(hGhostStart);
+            }
+
         }
 
         static void clearContent(GameCell currentCell,gameObject newGameObeject)
