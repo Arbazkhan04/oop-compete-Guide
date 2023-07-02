@@ -33,11 +33,12 @@
             label2 = new Label();
             label3 = new Label();
             groupBox1 = new GroupBox();
-            roleCombox = new ComboBox();
+            roleComboxBox = new ComboBox();
             label5 = new Label();
             label4 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtPassword = new TextBox();
+            txtName = new TextBox();
+            button2 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -87,11 +88,11 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.ControlLight;
-            groupBox1.Controls.Add(roleCombox);
+            groupBox1.Controls.Add(roleComboxBox);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txtPassword);
+            groupBox1.Controls.Add(txtName);
             groupBox1.Controls.Add(label3);
             groupBox1.Font = new Font("Segoe UI", 20F, FontStyle.Underline, GraphicsUnit.Point);
             groupBox1.Location = new Point(136, 152);
@@ -102,16 +103,16 @@
             groupBox1.Text = "SingUp Details";
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // roleCombox
+            // roleComboxBox
             // 
-            roleCombox.BackColor = SystemColors.InactiveBorder;
-            roleCombox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            roleCombox.FormattingEnabled = true;
-            roleCombox.Location = new Point(233, 160);
-            roleCombox.Name = "roleCombox";
-            roleCombox.Size = new Size(226, 25);
-            roleCombox.TabIndex = 8;
-            roleCombox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            roleComboxBox.BackColor = SystemColors.InactiveBorder;
+            roleComboxBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            roleComboxBox.FormattingEnabled = true;
+            roleComboxBox.Location = new Point(233, 160);
+            roleComboxBox.Name = "roleComboxBox";
+            roleComboxBox.Size = new Size(226, 25);
+            roleComboxBox.TabIndex = 8;
+            roleComboxBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label5
             // 
@@ -134,23 +135,34 @@
             label4.TabIndex = 6;
             label4.Text = "Password";
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.BackColor = SystemColors.InactiveBorder;
-            textBox2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(233, 113);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(226, 25);
-            textBox2.TabIndex = 5;
+            txtPassword.BackColor = SystemColors.InactiveBorder;
+            txtPassword.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.Location = new Point(233, 113);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(226, 25);
+            txtPassword.TabIndex = 5;
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.BackColor = SystemColors.InactiveBorder;
-            textBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(233, 65);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(226, 25);
-            textBox1.TabIndex = 4;
+            txtName.BackColor = SystemColors.InactiveBorder;
+            txtName.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtName.Location = new Point(233, 65);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(226, 25);
+            txtName.TabIndex = 4;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(508, 362);
+            button2.Name = "button2";
+            button2.Size = new Size(121, 39);
+            button2.TabIndex = 5;
+            button2.Text = "Login";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form2
             // 
@@ -158,6 +170,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(864, 473);
+            Controls.Add(button2);
             Controls.Add(groupBox1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -183,5 +196,9 @@
         private Label label4;
         private TextBox textBox2;
         private ComboBox roleCombox;
+        private Button button2;
+        private ComboBox roleComboxBox;
+        private TextBox txtPassword;
+        private TextBox txtName;
     }
 }

@@ -22,7 +22,14 @@ namespace E_commernece_app
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           if (SingUpDL.laodLoginDataFromFile())
+            {
+                MessageBox.Show("Path Exist");
+            }
+            else
+            {
+                MessageBox.Show("Path does not exist ");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,8 +79,9 @@ namespace E_commernece_app
             string name = txtUserName.Text;
             string password = txtUserPassword.Text;
             string role = txtRole.Text;
+            userLogin user = new userLogin(name, password, role);
+            MessageBox.Show(name + password + role);
 
-            userLogin user = new userLogin(name,password,role);
             if (SingUpDL.userExist(user))
             {
                 if (user.role == "user")
@@ -92,7 +100,14 @@ namespace E_commernece_app
             {
                 MessageBox.Show("Enter correct Crendentials");
             }
-          
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 forms2 = new Form2();
+            forms2.Show();
+            this.Hide();
         }
     }
 }

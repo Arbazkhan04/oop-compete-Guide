@@ -57,9 +57,9 @@ namespace Business_Application.DL
             file.Close();
         }
 
-        public static void laodLoginDataFromFile()
+        public static bool laodLoginDataFromFile()
         {
-                String path = "Auth.txt";
+                String path = "C:\\Users\\Arbaz khan\\OneDrive\\Desktop\\oop-compete-Guide\\Desktop Business application\\E-commernece app\\E-commernece app\\bin\\Debug\\Auth.txt"; //if issue is created pass as argument
                 if (File.Exists(path))
                 {
                     StreamReader file = new StreamReader(path);
@@ -74,12 +74,15 @@ namespace Business_Application.DL
                     }
                 }
                    
-                    file.Close();
+                 file.Close();
+                return true;
                 }
                 else
                 {
                     Console.Write("Path not exist ");
+                    return false;
                 }
+
 
         }
         

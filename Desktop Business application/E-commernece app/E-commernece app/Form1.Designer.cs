@@ -40,6 +40,7 @@
             label4 = new Label();
             txtUserName = new TextBox();
             label3 = new Label();
+            button3 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -81,6 +82,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(txtRole);
             groupBox1.Controls.Add(label5);
@@ -167,6 +169,17 @@
             label3.TabIndex = 0;
             label3.Text = "Name";
             // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.Location = new Point(260, 218);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 29);
+            button3.TabIndex = 7;
+            button3.Text = "Register";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
@@ -202,5 +215,6 @@
         private Label label5;
         private ComboBox txtRole;
         private Button button2;
+        private Button button3;
     }
 }
