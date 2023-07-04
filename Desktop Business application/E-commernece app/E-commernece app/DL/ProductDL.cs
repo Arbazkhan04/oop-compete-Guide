@@ -18,6 +18,7 @@ namespace Business_Application.DL
             AdminDL.productList.Add(product);
         }
 
+
         public static bool checkProductExist(Product p)
         {
             foreach (Product pll in AdminDL.productList)

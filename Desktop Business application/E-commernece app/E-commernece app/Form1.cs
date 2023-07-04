@@ -22,7 +22,7 @@ namespace E_commernece_app
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           if (SingUpDL.laodLoginDataFromFile())
+            if (SingUpDL.laodLoginDataFromFile())
             {
                 MessageBox.Show("Path Exist");
             }

@@ -29,12 +29,62 @@ namespace E_commernece_app
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            /*  string name = txtName.Text;
+             string password = txtPassword.Text;
+             string role = roleComboxBox.Text;
+             MessageBox.Show(name + password + role);
+             SingUp user = new SingUp(name, password, role);
+             if(role=="admin")
+             {
+
+             }
+             SingUpDL.adddUSerIntoUserLsit(user);*/
+
+            SingUp user = getUserData();
+            if (user != null)
+            {
+                SingUpDL.adddUSerIntoUserLsit(user);
+                SingUpDL.storeLoginDataIntoTheFile();//store data into file
+                MessageBox.Show("User Registered Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Provide valid Data");
+            }
+
+
+        }
+
+        private SingUp getUserData()
+        {
             string name = txtName.Text;
             string password = txtPassword.Text;
             string role = roleComboxBox.Text;
-            MessageBox.Show(name + password + role);
-            SingUp user = new SingUp(name, password, role);
-            SingUpDL.adddUSerIntoUserLsit(user);
+
+            if (role == "admin")
+            {
+
+                SingUp admin = new SingUp(name, password, role);
+                if (admin.setName(name) && admin.setPassword(password) && admin.setRole(role))
+                {
+
+                    if (SingUpDL.isAdminAlreadyResitered(admin))
+                    {
+                        return null;
+                    }
+
+                    return admin;
+                }
+                return null;
+            }
+
+            SingUp user = new SingUp(name, password);
+            if (user.setName(name) && user.setPassword(password))
+            {
+                return user;
+            }
+            return null;
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

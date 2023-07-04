@@ -47,7 +47,7 @@ namespace Business_Application.DL
 
        public static void storeLoginDataIntoTheFile()
         {
-            String path = "Auth.txt";
+            String path = "C:\\Users\\Arbaz khan\\OneDrive\\Desktop\\oop-compete-Guide\\Desktop Business application\\E-commernece app\\E-commernece app\\bin\\Debug\\Auth.txt";
             StreamWriter file = new StreamWriter(path, false);
             foreach(SingUp user in userList)
             {

@@ -33,6 +33,7 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
+            button3 = new Button();
             button2 = new Button();
             txtRole = new ComboBox();
             label5 = new Label();
@@ -40,7 +41,6 @@
             label4 = new Label();
             txtUserName = new TextBox();
             label3 = new Label();
-            button3 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -97,6 +97,17 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "User Details";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.Location = new Point(260, 218);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 29);
+            button3.TabIndex = 7;
+            button3.Text = "Register";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -169,23 +180,12 @@
             label3.TabIndex = 0;
             label3.Text = "Name";
             // 
-            // button3
-            // 
-            button3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(260, 218);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 29);
-            button3.TabIndex = 7;
-            button3.Text = "Register";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(1370, 749);
+            ClientSize = new Size(810, 445);
             Controls.Add(groupBox1);
             Controls.Add(label2);
             Controls.Add(label1);

@@ -1,2 +1,0 @@
-admin2,adminn2,admin
-user2,user2,user
