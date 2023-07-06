@@ -9,7 +9,6 @@ namespace PacMan
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             GameGrid grid = new GameGrid("maze.txt", 24, 71);
@@ -18,11 +17,14 @@ namespace PacMan
             PacmanPlayer player = new PacmanPlayer('P', start);//inheritaning the game object class 
 
             HorizantalGhost hGhost = new HorizantalGhost('G', hGhostStart);
+            
 
             printMaze(grid);
             printPlayer(player);
             printPlayer(hGhost);
-           
+
+            // string movehorizantaly
+            string direction = "Right";
 
             bool gameRunning = true;
             while(gameRunning)
@@ -51,7 +53,7 @@ namespace PacMan
                     moveGameObject(player, GameDirection.Right);
 
                 }
-                moveHorizantalGhost(hGhost);
+                moveHorizantalGhost(hGhost,  ref direction);
             }
 
             Console.ReadKey();
@@ -98,18 +100,45 @@ namespace PacMan
             
         }
 
-         static void moveHorizantalGhost(gameObject hGhostStart)
-        {
-          
-            GameCell nextCell = hGhostStart.CurrentCell.nextCell(GameDirection.Right);
-            if (nextCell!=null)
+         static void moveHorizantalGhost(HorizantalGhost hGhostStart, ref string direction)
+         {
+          if(direction=="Right")
             {
-                gameObject newGameObject = new gameObject(GameObjectType.None, ' ');
-                GameCell currentCell = hGhostStart.CurrentCell;
-                clearContent(currentCell, newGameObject);
-                hGhostStart.CurrentCell = nextCell;
-                printPlayer(hGhostStart);
+                // GameCell nextCell = hGhostStart.CurrentCell.nextCell(GameDirection.Right);
+
+                GameCell nextCell = hGhostStart.move();
+               
+                if (nextCell != null)
+                {
+                    gameObject newGameObject = new gameObject(GameObjectType.None, ' ');
+                    GameCell currentCell = hGhostStart.CurrentCell;
+                    clearContent(currentCell, newGameObject);
+                    hGhostStart.CurrentCell = nextCell;
+                    printPlayer(hGhostStart);
+                }
+                if (GameGrid.gameCell[nextCell.X, nextCell.Y + 1].CurrentGameObject.GameObjectType == GameObjectType.Wall)
+                {
+                    direction = "left";
+                }
+
             }
+          if(direction=="left")
+            {
+                GameCell nextCell = hGhostStart.CurrentCell.nextCell(GameDirection.Left);
+                if (nextCell != null)
+                {
+                    gameObject newGameObject = new gameObject(GameObjectType.None, ' ');
+                    GameCell currentCell = hGhostStart.CurrentCell;
+                    clearContent(currentCell, newGameObject);
+                    hGhostStart.CurrentCell = nextCell;
+                    printPlayer(hGhostStart);
+                }
+                if (GameGrid.gameCell[nextCell.X, nextCell.Y - 1].CurrentGameObject.GameObjectType == GameObjectType.Wall)
+                {
+                    direction = "Right";
+                }
+            }
+          
 
         }
 

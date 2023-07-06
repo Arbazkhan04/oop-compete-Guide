@@ -24,9 +24,10 @@ namespace Business_Application.DL
             {
                 for (int i = 0; i < userPurchasedProductList.Count; i++)
                 {
-                    if (userPurchasedProductList[i].productName == p.productName)
+                    if (userPurchasedProductList[i].getProductName() == p.getProductName())
                     {
-                        userPurchasedProductList[i].productQuantity += p.productQuantity;
+                       int QuantityIncrement = userPurchasedProductList[i].getproductQuantity()+p.getproductQuantity();
+                        userPurchasedProductList[i].setProductQunatity(QuantityIncrement);
                        
                     }
                 }
@@ -37,7 +38,7 @@ namespace Business_Application.DL
         {
             for (int i = 0; i < userPurchasedProductList.Count; i++)
             {
-                if (userPurchasedProductList[i].productName == p.productName)
+                if (userPurchasedProductList[i].getProductName() == p.getProductName())
                 {
                     return true;
                 }
@@ -47,7 +48,7 @@ namespace Business_Application.DL
         public static List<Product> getTopThreeSoldProduct()
         {
             List<Product> product;
-            product = userPurchasedProductList.OrderByDescending(p => p.productQuantity).ToList();
+            product = userPurchasedProductList.OrderByDescending(p => p.getproductQuantity()).ToList();
             return product.Count<3 ? null:product;
 
         }
@@ -57,10 +58,11 @@ namespace Business_Application.DL
             StreamWriter file = new StreamWriter(path, false);
              foreach(Product p in userPurchasedProductList)
             {
-             file.WriteLine(p.productName + "," + p.productPrice + "," + p.productQuantity + "," + p.catagory() + "," + p.taxPerProduct());
+             file.WriteLine(p.getProductName() + "," + p.getProductPrice() + "," + p.getproductQuantity() + "," + p.catagory() + "," + p.taxPerProduct());
             }
             
             file.Flush();
+
             file.Close();
         }
 

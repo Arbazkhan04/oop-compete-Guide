@@ -82,7 +82,7 @@ namespace Business_Application.UI
             int index = ValidationUI.EnterOption(AdminDL.productList.Count);
             Console.Write("Enter quatnity you wnato to buy ");
             int quantity = ValidationUI.EnterOption(10000);
-            if (!(quantity > AdminDL.productList[index].productQuantity))
+            if (!(quantity > AdminDL.productList[index].getproductQuantity()))
             {
                 Product ExistProduct = ProductDL.getProdcutByIndex(index);
                 if (ExistProduct != null)
@@ -91,14 +91,14 @@ namespace Business_Application.UI
 
                     if (ExistProduct.catagory() == "clothes")
                     {
-                        Clothes cloth = new Clothes(ExistProduct.productName, ExistProduct.productPrice, quantity);
+                        Clothes cloth = new Clothes(ExistProduct.getProductName(), ExistProduct.getProductPrice(), quantity);
                         Console.Write("Product Purchased Successfully");
                         UserDL.addPurchasedProduct(cloth);
                         UserDL.storePurchasedProductIntoTheFile();
                     }
                     else if (ExistProduct.catagory() == "Mobiles")
                     {
-                        Mobiles moboile = new Mobiles(ExistProduct.productName, ExistProduct.productPrice, quantity);
+                        Mobiles moboile = new Mobiles(ExistProduct.getProductName(), ExistProduct.getProductPrice(), quantity);
                         Console.Write("Product Purchased Successfully");
                         UserDL.addPurchasedProduct(moboile);
                         UserDL.storePurchasedProductIntoTheFile();
@@ -134,7 +134,7 @@ namespace Business_Application.UI
                 for(int i=0;i<products.Count;i++)
                 {
                     Product item = products[i];
-                    Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} | {item.catagory(),-8} |");
+                    Console.WriteLine($"|   {i,-8} |   {item.getProductName(),-15} |   ${item.getProductPrice(),-7} |   {item.getproductQuantity(),-10} | {item.catagory(),-8} |");
                 }
                 Console.WriteLine("-----------------------------------------------------------------");
 
@@ -156,7 +156,7 @@ namespace Business_Application.UI
                 for (int i = 0; i < UserDL.userPurchasedProductList.Count; i++)
                 {
                     Product item = UserDL.userPurchasedProductList[i];
-                    Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} | {item.catagory(),-8} |   ${Math.Round(item.taxPerProduct(),2),-5} |");
+                    Console.WriteLine($"|   {i,-8} |   {item.getProductName(),-15} |   ${item.getProductPrice(),-7} |   {item.getproductQuantity(),-10} | {item.catagory(),-8} |   ${Math.Round(item.taxPerProduct(),2),-5} |");
                 }
             }
             else
@@ -176,7 +176,7 @@ namespace Business_Application.UI
                 Console.WriteLine("------------------------------------------------------------------------------");
                 Console.WriteLine("|   Index   |   Product Name   |   Price   |   Quantity   | Category |   Tax   |");
                 Console.WriteLine("------------------------------------------------------------------------------");
-                UserDL.userPurchasedProductList.Sort((x, y) => y.productPrice.CompareTo(x.productPrice));//sort the product accoding to the highest price at starting indexs
+                UserDL.userPurchasedProductList.Sort((x, y) => y.getProductPrice().CompareTo(x.getProductPrice()));//sort the product accoding to the highest price at starting indexs
                 for(int i=0;i<UserDL.userPurchasedProductList.Count;i++)
 
                 {
@@ -186,7 +186,7 @@ namespace Business_Application.UI
                     }
 
                     Product item = UserDL.userPurchasedProductList[i];
-                    Console.WriteLine($"|   {i,-8} |   {item.productName,-15} |   ${item.productPrice,-7} |   {item.productQuantity,-10} | {item.catagory(),-8} |   ${Math.Round(item.taxPerProduct(), 2),-5} |");
+                    Console.WriteLine($"|   {i,-8} |   {item.getProductName(),-15} |   ${item.getProductPrice(),-7} |   {item.getproductQuantity(),-10} | {item.catagory(),-8} |   ${Math.Round(item.taxPerProduct(), 2),-5} |");
                 }
                 Console.WriteLine("-------------------------------------------------------------");
 

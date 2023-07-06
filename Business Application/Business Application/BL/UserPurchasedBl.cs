@@ -11,7 +11,6 @@ namespace Business_Application.BL
         public string productName;
         public int productPrice;
         public int productQuantity;
-
         public UserPurchasedBl(string productName, int productPrice, int productQuantity)
         {
             this.productName = productName;

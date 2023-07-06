@@ -21,8 +21,13 @@ namespace Business_Application.UI
             int pQuantity = ValidationUI.EnterOption(10000);
 
             Product p = new Product(pName, pPrice, pQuantity);
-
+            if(p.setProductName(pName)&& p.setProductPrice(pPrice)&& p.setProductQunatity(pQuantity))
+            {
             return p;
+            }
+
+            return null;
+
         }
 
         public static Product delteProduct()

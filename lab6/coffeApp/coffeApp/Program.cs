@@ -54,7 +54,11 @@ namespace coffeApp
                     CoffeeShopUI.addOrder();
                     Console.ReadKey();
                 }
+                else if(opt==6)
+                {
 
+
+                }
                 Console.Clear();
                 opt = CoffeeShopUI.menu();
             }

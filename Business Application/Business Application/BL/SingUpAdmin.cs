@@ -8,6 +8,6 @@ namespace Business_Application.BL
 {
     public class SingUpAdmin
     {
-      
+       
     }
 }

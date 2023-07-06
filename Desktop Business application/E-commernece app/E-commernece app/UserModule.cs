@@ -31,5 +31,10 @@ namespace E_commernece_app
         {
 
         }
+
+        private void UserModule_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

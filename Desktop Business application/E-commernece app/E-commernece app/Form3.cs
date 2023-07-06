@@ -1,4 +1,5 @@
-﻿using System;
+﻿//using E_commernece_app.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,7 +77,7 @@ namespace E_commernece_app
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form form = new CreateProductForm();
+            Form form = new updateProductForm();
             form.Show();
             this.Hide();
         }
@@ -88,9 +89,7 @@ namespace E_commernece_app
 
         private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form form = new UserList();
-            form.Show();
-            this.Hide();
+
         }
     }
 }

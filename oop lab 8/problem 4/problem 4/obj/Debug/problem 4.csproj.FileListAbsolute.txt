@@ -1,0 +1,8 @@
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oop lab 8\problem 4\problem 4\bin\Debug\problem 4.exe.config
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oop lab 8\problem 4\problem 4\bin\Debug\problem 4.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oop lab 8\problem 4\problem 4\bin\Debug\problem 4.pdb
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oop lab 8\problem 4\problem 4\obj\Debug\problem 4.csproj.AssemblyReference.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oop lab 8\problem 4\problem 4\obj\Debug\problem 4.csproj.SuggestedBindingRedirects.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oop lab 8\problem 4\problem 4\obj\Debug\problem 4.csproj.CoreCompileInputs.cache
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oop lab 8\problem 4\problem 4\obj\Debug\problem 4.exe
+C:\Users\Arbaz khan\Desktop\oop-compete-Guide\oop lab 8\problem 4\problem 4\obj\Debug\problem 4.pdb

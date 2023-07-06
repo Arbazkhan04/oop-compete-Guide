@@ -1,0 +1,40 @@
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\spaceShooter.exe
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\spaceShooter.deps.json
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\spaceShooter.runtimeconfig.json
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\spaceShooter.dll
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\spaceShooter.pdb
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\EZInput.dll
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.csproj.AssemblyReference.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.Form1.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.Properties.Resources.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.csproj.GenerateResource.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.AssemblyInfoInputs.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.AssemblyInfo.cs
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.csproj.CoreCompileInputs.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.csproj.CopyComplete
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.dll
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\refint\spaceShooter.dll
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.pdb
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.genruntimeconfig.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\ref\spaceShooter.dll
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\spaceShooter.exe
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\spaceShooter.deps.json
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\spaceShooter.runtimeconfig.json
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\spaceShooter.dll
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\spaceShooter.pdb
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\bin\Debug\net6.0-windows\EZInput.dll
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.csproj.AssemblyReference.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.Form1.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.Properties.Resources.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.csproj.GenerateResource.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.AssemblyInfoInputs.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.AssemblyInfo.cs
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.csproj.CoreCompileInputs.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.csproj.CopyComplete
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.dll
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\refint\spaceShooter.dll
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.pdb
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\spaceShooter.genruntimeconfig.cache
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\spaceShooter\spaceShooter\obj\Debug\net6.0-windows\ref\spaceShooter.dll

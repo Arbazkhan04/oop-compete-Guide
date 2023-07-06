@@ -10,12 +10,12 @@ namespace PacMan.BL
     {
         public HorizantalGhost(char displayCharacter, GameCell cell) : base(displayCharacter, cell)
         {
-          
         }
 
-        public override GameCell move() //move ghost horizantal
+        public  override GameCell move() //move ghost horizantal
         {
-            return null;
+            if(this.CurrentCell.)
+            return this.CurrentCell.nextCell(GameDirection.Right);//methd flop because it will only move toward right
         }
     }
 }

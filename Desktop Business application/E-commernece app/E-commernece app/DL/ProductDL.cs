@@ -80,7 +80,7 @@ namespace Business_Application.DL
 
         public static void storeProductDataIntoTheFile()
         {
-            String path = "Product.txt";
+            String path = "C:\\Users\\Arbaz khan\\OneDrive\\Desktop\\oop-compete-Guide\\Desktop Business application\\E-commernece app\\E-commernece app\\bin\\Debug\\Product.txt";
             StreamWriter file = new StreamWriter(path, false);
 
             foreach(Product p in AdminDL.productList)
@@ -92,9 +92,9 @@ namespace Business_Application.DL
             file.Close();
         }
 
-        public static void laodProductDataFromFile()
+        public static bool laodProductDataFromFile()
         {
-            String path = "Product.txt";
+            String path = "C:\\Users\\Arbaz khan\\OneDrive\\Desktop\\oop-compete-Guide\\Desktop Business application\\E-commernece app\\E-commernece app\\bin\\Debug\\Product.txt";
             if (File.Exists(path))
             {
                 StreamReader file = new StreamReader(path);
@@ -123,10 +123,12 @@ namespace Business_Application.DL
                 }
 
                 file.Close();
+                return true;
             }
             else
             {
                 Console.Write("Path not exist ");
+                return false;
             }
 
         }
