@@ -1,6 +1,6 @@
 ﻿namespace E_commernece_app
 {
-    partial class Form3
+    partial class AdminModule
     {
         /// <summary>
         /// Required designer variable.

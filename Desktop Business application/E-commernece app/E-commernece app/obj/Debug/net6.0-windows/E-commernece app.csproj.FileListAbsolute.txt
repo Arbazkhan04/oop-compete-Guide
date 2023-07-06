@@ -4,8 +4,6 @@ C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business applicat
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\bin\Debug\net6.0-windows\E-commernece app.dll
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\bin\Debug\net6.0-windows\E-commernece app.pdb
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E-commernece app.csproj.AssemblyReference.cache
-C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.Form1.resources
-C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.Form2.resources
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E-commernece app.csproj.GenerateResource.cache
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E-commernece app.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E-commernece app.AssemblyInfoInputs.cache
@@ -16,8 +14,10 @@ C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business applicat
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E-commernece app.pdb
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E-commernece app.genruntimeconfig.cache
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\ref\E-commernece app.dll
-C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.Form3.resources
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.Properties.Resources.resources
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.CreateProductForm.resources
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.UserModule.resources
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.updateProductForm.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.AdminModule.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.LoginForm.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.SingUpForm.resources

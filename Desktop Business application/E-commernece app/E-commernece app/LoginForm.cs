@@ -5,10 +5,10 @@ using System.Data;
 
 namespace E_commernece_app
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
         private List<string> role = new List<string>();
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
             populateRoleIntoComboBox();
@@ -34,7 +34,7 @@ namespace E_commernece_app
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 forms2 = new Form2();
+            SingUpForm forms2 = new SingUpForm();
             forms2.Show();
             this.Hide();
         }
@@ -105,7 +105,7 @@ namespace E_commernece_app
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form2 forms2 = new Form2();
+            SingUpForm forms2 = new SingUpForm();
             forms2.Show();
             this.Hide();
         }

@@ -1,6 +1,6 @@
 ﻿namespace E_commernece_app
 {
-    partial class Form2
+    partial class SingUpForm
     {
         /// <summary>
         /// Required designer variable.

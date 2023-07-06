@@ -1,6 +1,6 @@
 ﻿namespace E_commernece_app
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         ///  Required designer variable.

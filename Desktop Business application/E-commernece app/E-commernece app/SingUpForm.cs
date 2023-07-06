@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace E_commernece_app
 {
-    public partial class Form2 : Form
+    public partial class SingUpForm : Form
     {
         private List<string> role = new List<string>();
 
-        public Form2()
+        public SingUpForm()
         {
             InitializeComponent();
             populateComboBox();
@@ -110,7 +110,7 @@ namespace E_commernece_app
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            LoginForm form1 = new LoginForm();
             form1.Show();
             this.Hide();
         }

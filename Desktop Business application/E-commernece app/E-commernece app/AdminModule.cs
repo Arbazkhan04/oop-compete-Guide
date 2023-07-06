@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace E_commernece_app
 {
-    public partial class Form3 : Form
+    public partial class AdminModule : Form
     {
-        public Form3()
+        public AdminModule()
         {
             InitializeComponent();
         }

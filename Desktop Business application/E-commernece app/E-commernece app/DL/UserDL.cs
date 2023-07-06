@@ -45,7 +45,7 @@ namespace Business_Application.DL
             }
             return false;
         }
-        public static List<Product> getTopThreeSoldProduct()
+        public static List<Product>? getTopThreeSoldProduct() // here the ? means i can return null as well to prevent the erro message possibly return nulll value;
         {
             List<Product> product;
             product = userPurchasedProductList.OrderByDescending(p => p.getproductQuantity()).ToList();
@@ -72,7 +72,7 @@ namespace Business_Application.DL
             if (File.Exists(path))
             {
                 StreamReader file = new StreamReader(path);
-                string record;
+                string record; //it can hold null value;
                 while ((record = file.ReadLine()) != null)
                 {
 
@@ -103,8 +103,9 @@ namespace Business_Application.DL
         }
 
 
-        public static Product getTrendingProduct(int index)
+        public static Product? getTrendingProduct(int index)
         {
+
             return index > 3 ? null : userPurchasedProductList[index]; 
         }
 
