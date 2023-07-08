@@ -23,7 +23,7 @@ namespace Business_Application.UI
             Product p = new Product(pName, pPrice, pQuantity);
             if(p.setProductName(pName)&& p.setProductPrice(pPrice)&& p.setProductQunatity(pQuantity))
             {
-            return p;
+                return p;
             }
 
             return null;

@@ -5,6 +5,10 @@ namespace spaceShooter
     public partial class Form1 : Form
     {
         public List<PictureBox> playerFires = new List<PictureBox>();
+
+        Random rand = new Random();
+        PictureBox enemyBlack;
+        PictureBox enemyBlue;
         public Form1()
         {
             InitializeComponent();
@@ -12,7 +16,8 @@ namespace spaceShooter
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            enemyBlack = createEnemy(spaceShooter.Properties.Resources.monster);
+            this.Controls.Add(enemyBlack);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -51,6 +56,24 @@ namespace spaceShooter
                     playerFires.Remove(playerFires[idx]);
                 }
             }
+
+           
+        }
+
+        private PictureBox createEnemy(Image img)
+        {
+            PictureBox pbEnmey = new PictureBox();
+            int left = rand.Next(30, this.Width);
+            int top = rand.Next(5, img.Height + 20);
+            pbEnmey.Left = left;
+            pbEnmey.Top = top ;
+            pbEnmey.Height = img.Height;
+            pbEnmey.Width = img.Width;
+            pbEnmey.BackColor = Color.Transparent;
+            pbEnmey.Image = img;
+            return pbEnmey;
+
+
         }
     }
 }

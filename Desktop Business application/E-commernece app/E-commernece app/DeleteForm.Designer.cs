@@ -38,6 +38,7 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             comboBox1 = new ComboBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(textBox2);
@@ -111,7 +113,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(63, 182);
+            label4.Location = new Point(63, 191);
             label4.Name = "label4";
             label4.Size = new Size(90, 37);
             label4.TabIndex = 4;
@@ -137,16 +139,25 @@
             // 
             comboBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(190, 191);
+            comboBox1.Location = new Point(190, 197);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(236, 31);
+            comboBox1.Size = new Size(224, 31);
             comboBox1.TabIndex = 7;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(429, 191);
+            button1.Name = "button1";
+            button1.Size = new Size(107, 46);
+            button1.TabIndex = 8;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // DeleteForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 476);
+            ClientSize = new Size(800, 488);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Name = "DeleteForm";
@@ -169,5 +180,6 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private Button button1;
     }
 }
