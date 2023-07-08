@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PacMan.GameGL
 {
-    enum GameObjectType
+    public enum GameObjectType
     {
         WALL,
         PLAYER,

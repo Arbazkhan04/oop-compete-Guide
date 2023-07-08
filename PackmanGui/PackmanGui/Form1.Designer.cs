@@ -28,14 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            gameLoop = new System.Windows.Forms.Timer(components);
             SuspendLayout();
+            // 
+            // gameLoop
+            // 
+            gameLoop.Enabled = true;
+            gameLoop.Tick += gameLoop_Tick;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(868, 490);
+            ClientSize = new Size(1124, 535);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -43,5 +50,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer gameLoop;
     }
 }

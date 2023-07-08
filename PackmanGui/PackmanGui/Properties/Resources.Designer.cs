@@ -143,9 +143,29 @@ namespace PackmanGui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pallet {
+            get {
+                object obj = ResourceManager.GetObject("pallet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap simplebox {
             get {
                 object obj = ResourceManager.GetObject("simplebox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vertical {
+            get {
+                object obj = ResourceManager.GetObject("vertical", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

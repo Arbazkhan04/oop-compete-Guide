@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PacMan.GameGL
 {
-    class GameObject
+   public class GameObject
     {
         char displayCharacter;
         GameObjectType gameObjectType;
@@ -17,7 +17,11 @@ namespace PacMan.GameGL
             this.img = img;
             this.gameObjectType = type;  
         }
-
+        public GameObject(GameObjectType type, char displayCharacter)
+        {
+            this.displayCharacter = displayCharacter;
+            this.gameObjectType = type;
+        }
         public static GameObjectType getGameObjectType(char displayCharacter) { 
 
             if (displayCharacter == '|' || displayCharacter == '%' || displayCharacter == '#') {
@@ -31,14 +35,6 @@ namespace PacMan.GameGL
             return GameObjectType.NONE;
         }
 
-        public static Image getGameObjectImage(char displayCharacter)
-        {
-            if(displayCharacter=='#')
-            {
-                return PackmanGui.Properties.Resources.horizontal;
-            }
-            return PackmanGui.Properties.Resources.horizontal;
-        }
         public char DisplayCharacter { get => displayCharacter; set => displayCharacter = value; }
         public GameObjectType GameObjectType { get => gameObjectType; set => gameObjectType = value; }
 
@@ -47,7 +43,7 @@ namespace PacMan.GameGL
             get => currentCell; 
             set  { 
                 currentCell = value;
-                currentCell.CurrentGameObject = this;
+                currentCell.setGameObject(this);
             }
         }
     }

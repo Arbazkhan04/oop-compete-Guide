@@ -1,9 +1,10 @@
-﻿using System;
+﻿using PackmanGui.GameGL;
+using System;
 using System.IO;
 
 namespace PacMan.GameGL
 {
-    class GameGrid
+   public class GameGrid
     {
         GameCell[,] cells;
         int rows;
@@ -32,12 +33,12 @@ namespace PacMan.GameGL
                 record = fp.ReadLine();
                 for (int col = 0;col < this.cols; col++)
                 {
-                    GameCell cell = new GameCell(row,col,this);
+                    GameCell cell = new GameCell(row, col, this);
                     char displayCharacter = record[col];
                     GameObjectType type = GameObject.getGameObjectType(displayCharacter);
-                    Image img = GameObject.getGameObjectImage(displayCharacter);
-                    GameObject gameObject = new GameObject(type, img);
-                    cell.CurrentGameObject = gameObject;
+                    Image displayIamge = Game.getGameObjectImage(displayCharacter);
+                    GameObject gameObject = new GameObject(type, displayIamge);
+                    cell.setGameObject(gameObject);
                     cells[row, col] = cell;
                 }
             }

@@ -1,15 +1,31 @@
 ﻿namespace PacMan.GameGL
 {
-    class GameCell : PictureBox
+    public class GameCell
     {
         int x;
         int y;
         GameObject currentGameObject;
         GameGrid grid;
+        PictureBox pictureBox;
+        const int width = 20;
+        const int height = 20;
         public GameCell(int x, int y,GameGrid grid) {
             this.x = x;
             this.y = y;
+            pictureBox = new PictureBox();
+            pictureBox.Left = y * width;
+            pictureBox.Top = x * height;
+            pictureBox.Size = new Size(width, height);
+            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox.BackColor = Color.Transparent;
             this.grid = grid;
+        }
+
+        public void setGameObject(GameObject gameObject)
+        {
+            currentGameObject = gameObject;
+            pictureBox.Image = gameObject.Img;
+
         }
         public GameCell nextCell(GameDirection direction)
         {
@@ -62,6 +78,7 @@
         }
         public int X { get => x; set => x = value; }
         public int Y { get => y; set => y = value; }
+        public PictureBox PictureBox { get => pictureBox; set => pictureBox = value; }
         public GameObject CurrentGameObject { get => currentGameObject; set => currentGameObject = value; }
     }
 }
