@@ -8,7 +8,7 @@ namespace PacMan.GL
 {
     class Ghost
     {
-       public int ghostX ;
+        public int ghostX ;
         public int ghostY ;
         public string ghostDirection;
         public float speed; //value should be between 0 and 1.
