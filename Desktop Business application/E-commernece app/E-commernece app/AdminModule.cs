@@ -89,6 +89,39 @@ namespace E_commernece_app
 
         private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Form form = new UserListForm();
+            form.Show();
+            this.Hide();
+        }
+
+        private void linkLabel5_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form form = new adminViewAllProduct();
+            form.Show();
+            this.Hide();
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form form = new ProductAnalysticsForm();
+            form.Show();
+            this.Hide();
+        }
+
+        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form form = new AdminProductDetailForm();
+            form.Show();
+            this.Hide();
+        }
+
+        private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
 
         }
     }

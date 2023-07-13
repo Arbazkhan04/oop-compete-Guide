@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace E_commernece_app
 {
-    public partial class DeleteForm : Form
+    public partial class AdminProductDetailForm : Form
     {
-        public DeleteForm()
+        public AdminProductDetailForm()
         {
             InitializeComponent();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

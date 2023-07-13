@@ -141,6 +141,7 @@
             linkLabel10.TabIndex = 1;
             linkLabel10.TabStop = true;
             linkLabel10.Text = "Delete Account";
+            linkLabel10.LinkClicked += linkLabel10_LinkClicked;
             // 
             // pictureBox11
             // 
@@ -163,6 +164,7 @@
             linkLabel9.TabIndex = 2;
             linkLabel9.TabStop = true;
             linkLabel9.Text = "Prodcut Details";
+            linkLabel9.LinkClicked += linkLabel9_LinkClicked;
             // 
             // linkLabel8
             // 
@@ -174,6 +176,7 @@
             linkLabel8.TabIndex = 1;
             linkLabel8.TabStop = true;
             linkLabel8.Text = "Product Analystics";
+            linkLabel8.LinkClicked += linkLabel8_LinkClicked;
             // 
             // pictureBox10
             // 
@@ -238,6 +241,7 @@
             linkLabel6.TabIndex = 1;
             linkLabel6.TabStop = true;
             linkLabel6.Text = "Total Sold Product";
+            linkLabel6.LinkClicked += linkLabel6_LinkClicked;
             // 
             // linkLabel5
             // 
@@ -249,6 +253,7 @@
             linkLabel5.TabIndex = 1;
             linkLabel5.TabStop = true;
             linkLabel5.Text = "View All Product";
+            linkLabel5.LinkClicked += linkLabel5_LinkClicked_1;
             // 
             // pictureBox6
             // 
@@ -527,7 +532,7 @@
             label10.TabIndex = 4;
             label10.Text = "Welcome to Admin Dashboard";
             // 
-            // Form3
+            // AdminModule
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -541,7 +546,7 @@
             Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = SystemColors.Control;
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Form3";
+            Name = "AdminModule";
             Text = "Admin";
             Load += Form3_Load;
             panel1.ResumeLayout(false);

@@ -30,15 +30,15 @@
         {
             dataGridView1 = new DataGridView();
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            comboBox1 = new ComboBox();
             button1 = new Button();
+            comboBox1 = new ComboBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -71,43 +71,40 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Let's Delete The Product";
             // 
-            // label1
+            // button1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(63, 63);
-            label1.Name = "label1";
-            label1.Size = new Size(90, 37);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            button1.Location = new Point(429, 191);
+            button1.Name = "button1";
+            button1.Size = new Size(107, 46);
+            button1.TabIndex = 8;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // comboBox1
             // 
-            textBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(190, 69);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(224, 31);
-            textBox1.TabIndex = 1;
+            comboBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(190, 197);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(224, 31);
+            comboBox1.TabIndex = 7;
             // 
-            // label2
+            // textBox3
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(63, 100);
-            label2.Name = "label2";
-            label2.Size = new Size(90, 37);
-            label2.TabIndex = 2;
-            label2.Text = "label2";
+            textBox3.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(190, 154);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(224, 31);
+            textBox3.TabIndex = 6;
             // 
-            // label3
+            // textBox2
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(63, 145);
-            label3.Name = "label3";
-            label3.Size = new Size(90, 37);
-            label3.TabIndex = 3;
-            label3.Text = "label3";
+            textBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(190, 109);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(224, 31);
+            textBox2.TabIndex = 5;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label4
             // 
@@ -119,39 +116,43 @@
             label4.TabIndex = 4;
             label4.Text = "label4";
             // 
-            // textBox2
+            // label3
             // 
-            textBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(190, 109);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(224, 31);
-            textBox2.TabIndex = 5;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(63, 145);
+            label3.Name = "label3";
+            label3.Size = new Size(90, 37);
+            label3.TabIndex = 3;
+            label3.Text = "label3";
             // 
-            // textBox3
+            // label2
             // 
-            textBox3.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(190, 154);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(224, 31);
-            textBox3.TabIndex = 6;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(63, 100);
+            label2.Name = "label2";
+            label2.Size = new Size(90, 37);
+            label2.TabIndex = 2;
+            label2.Text = "label2";
             // 
-            // comboBox1
+            // textBox1
             // 
-            comboBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(190, 197);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(224, 31);
-            comboBox1.TabIndex = 7;
+            textBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(190, 69);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(224, 31);
+            textBox1.TabIndex = 1;
             // 
-            // button1
+            // label1
             // 
-            button1.Location = new Point(429, 191);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 46);
-            button1.TabIndex = 8;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(63, 63);
+            label1.Name = "label1";
+            label1.Size = new Size(90, 37);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
             // 
             // DeleteForm
             // 
