@@ -22,14 +22,10 @@ namespace E_commernece_app
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (SingUpDL.laodLoginDataFromFile())
-            {
-                MessageBox.Show("Path Exist");
-            }
-            else
-            {
-                MessageBox.Show("Path does not exist ");
-            }
+
+            SingUpDL.laodLoginDataFromFile();
+            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -80,18 +76,24 @@ namespace E_commernece_app
             string password = txtUserPassword.Text;
             string role = txtRole.Text;
             userLogin user = new userLogin(name, password, role);
-            MessageBox.Show(name + password + role);
+            
 
             if (SingUpDL.userExist(user))
             {
                 if (user.role == "user")
                 {
                     // navigate toward user;
-                    MessageBox.Show("Regualr User loged in");
+                   
+                    //navigat to dash board
+                    Form form = new UserModule(user);
+                    form.Show();
+                    this.Hide();
                 }
                 else if (user.role == "admin")
                 {
-                    MessageBox.Show("Admin User loged in");
+                    Form form = new AdminModule(user);
+                    form.Show();
+                    this.Hide();
 
                     //navigate toward admin
                 }

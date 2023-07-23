@@ -1,5 +1,3 @@
-khan,123,admin
+khann,12345,admin
 kha,123,user
 kha,123,user
-kha,123,user
-khan,123,user

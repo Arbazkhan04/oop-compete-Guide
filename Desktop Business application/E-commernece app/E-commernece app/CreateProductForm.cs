@@ -50,17 +50,24 @@ namespace E_commernece_app
             int quantity = int.Parse(txtPQuantity.Text);
             string qatagory = comboBox1.Text;
 
-            if(qatagory == "Mobiles")
+            if (qatagory == "Mobiles")
             {
                 Mobiles mobile = new Mobiles(pName, price, quantity);
                 ProductDL.addProduct(mobile);
             }
-            else if(qatagory == "clothes")
+            else if (qatagory == "clothes")
             {
                 Clothes cloht = new Clothes(pName, price, quantity);
                 ProductDL.addProduct(cloht);
             }
+            ProductDL.storeProductDataIntoTheFile(); //update the file 
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form form = new AdminModule();
+            form.Show();
+            this.Hide();
         }
     }
 }

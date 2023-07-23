@@ -19,11 +19,11 @@ namespace Business_Application.DL
         }
 
 
-        public static bool checkProductExist(Product p)
+        public static bool checkProductExist(int index)
         {
-            foreach (Product pll in AdminDL.productList)
+            for(int i = 0; i<AdminDL.productList.Count;i++)
             {
-                if (pll.getProductName() == p.getProductName() && pll.getProductPrice() == p.getProductPrice() && pll.getproductQuantity() == p.getproductQuantity())
+                if(index == i)
                 {
                     return true;
                 }
@@ -31,20 +31,15 @@ namespace Business_Application.DL
           
             return false;
         }
-
-        public static void upDateProduct(Product p)
+       
+        public static void upDateProduct(Product p , int index)
         {
-            foreach (Product pll in AdminDL.productList)
-            {
-                if (pll.getProductName() == p.getProductName() && pll.getProductPrice() == p.getProductPrice() && pll.getproductQuantity() == p.getproductQuantity())
-                {
-                    Console.WriteLine("now update the product");
-                  //  Product p2 = ProductUI.updateProduct();
-                 /*   pll.setProductName(p2.getProductName());
-                    pll.setProductPrice(p2.getProductPrice());
-                    pll.setProductQunatity(p2.getproductQuantity())*/
-                }
-            }
+
+            // Product p2 = ProductUI.updateProduct();
+            AdminDL.productList[index].setProductName(p.getProductName());
+            AdminDL.productList[index].setProductPrice(p.getProductPrice());
+            AdminDL.productList[index].setProductQunatity(p.getproductQuantity());
+        
         }
 
         public static void deleteProduct(Product p)
@@ -106,7 +101,7 @@ namespace Business_Application.DL
                     int pQuantity = int.Parse(parseData(record, 3));
                     string pCatagory = parseData(record, 4);
                     //  double pTax = double.Parse(parseData(record, 5));
-                    if (pCatagory == "Mobile")
+                    if (pCatagory == "Mobiles")
                     {
                         Mobiles mobile = new Mobiles(pName, pPrice, pQuantity);
                         
@@ -127,7 +122,7 @@ namespace Business_Application.DL
             }
             else
             {
-                Console.Write("Path not exist ");
+               
                 return false;
             }
 

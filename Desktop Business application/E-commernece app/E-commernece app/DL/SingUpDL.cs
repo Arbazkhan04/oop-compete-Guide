@@ -45,6 +45,22 @@ namespace Business_Application.DL
             return false;
         }
 
+        public static bool updateTheUser(userLogin pUser,userLogin lUser)
+        {
+            for(int i=0; i<SingUpDL.userList.Count;i++)
+            {
+                SingUp user = SingUpDL.userList[i];
+                if(pUser.name == user.getName() && pUser.pasword == user.getPassword() && pUser.role == user.getRole())
+                {
+                    SingUpDL.userList[i].setName(lUser.name);
+                    SingUpDL.userList[i].setPassword(lUser.pasword);
+                    SingUpDL.userList[i].setRole(lUser.role);
+                    return true;
+                }
+            }
+            return false;
+        }
+
        public static void storeLoginDataIntoTheFile()
         {
             String path = "C:\\Users\\Arbaz khan\\OneDrive\\Desktop\\oop-compete-Guide\\Desktop Business application\\E-commernece app\\E-commernece app\\bin\\Debug\\Auth.txt";
@@ -82,8 +98,6 @@ namespace Business_Application.DL
                     Console.Write("Path not exist ");
                     return false;
                 }
-
-
         }
         
     }

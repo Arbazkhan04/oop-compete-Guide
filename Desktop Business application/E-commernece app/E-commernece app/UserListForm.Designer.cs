@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            uDataGV = new DataGridView();
+            pictureBox1 = new PictureBox();
+            folderBrowserDialog1 = new FolderBrowserDialog();
+            ((System.ComponentModel.ISupportInitialize)uDataGV).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -42,25 +45,40 @@
             label1.TabIndex = 0;
             label1.Text = "Total User list ";
             // 
-            // dataGridView1
+            // uDataGV
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(98, 107);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(597, 282);
-            dataGridView1.TabIndex = 1;
+            uDataGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            uDataGV.Location = new Point(98, 107);
+            uDataGV.Name = "uDataGV";
+            uDataGV.RowTemplate.Height = 25;
+            uDataGV.Size = new Size(597, 282);
+            uDataGV.TabIndex = 1;
+            uDataGV.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.back_button;
+            pictureBox1.Location = new Point(33, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(75, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // UserListForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            Controls.Add(pictureBox1);
+            Controls.Add(uDataGV);
             Controls.Add(label1);
             Name = "UserListForm";
             Text = "UserListForm";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += UserListForm_Load;
+            ((System.ComponentModel.ISupportInitialize)uDataGV).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -68,6 +86,8 @@
         #endregion
 
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView uDataGV;
+        private PictureBox pictureBox1;
+        private FolderBrowserDialog folderBrowserDialog1;
     }
 }

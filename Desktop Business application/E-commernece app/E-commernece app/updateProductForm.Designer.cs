@@ -30,136 +30,174 @@
         {
             pDataGV = new DataGridView();
             updateGrpBox = new GroupBox();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            label3 = new Label();
-            label4 = new Label();
-            comboBox1 = new ComboBox();
+            txtPIndex = new TextBox();
             button1 = new Button();
+            lblPIndex = new Label();
+            cbxUpdateProduct = new ComboBox();
+            txtPCatagory = new Label();
+            txtUpdatedPQuantty = new Label();
+            txtUpdatedPquantity = new TextBox();
+            txtUpdatedPPrice = new TextBox();
+            label2 = new Label();
+            txtUpdatePName = new TextBox();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pDataGV).BeginInit();
             updateGrpBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pDataGV
             // 
             pDataGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            pDataGV.Location = new Point(99, 12);
+            pDataGV.Location = new Point(118, 12);
             pDataGV.Name = "pDataGV";
             pDataGV.RowTemplate.Height = 25;
-            pDataGV.Size = new Size(571, 179);
+            pDataGV.Size = new Size(546, 179);
             pDataGV.TabIndex = 0;
             pDataGV.CellContentClick += pDataGV_CellContentClick;
             // 
             // updateGrpBox
             // 
+            updateGrpBox.Controls.Add(txtPIndex);
             updateGrpBox.Controls.Add(button1);
-            updateGrpBox.Controls.Add(comboBox1);
-            updateGrpBox.Controls.Add(label4);
-            updateGrpBox.Controls.Add(label3);
-            updateGrpBox.Controls.Add(textBox3);
-            updateGrpBox.Controls.Add(textBox2);
+            updateGrpBox.Controls.Add(lblPIndex);
+            updateGrpBox.Controls.Add(cbxUpdateProduct);
+            updateGrpBox.Controls.Add(txtPCatagory);
+            updateGrpBox.Controls.Add(txtUpdatedPQuantty);
+            updateGrpBox.Controls.Add(txtUpdatedPquantity);
+            updateGrpBox.Controls.Add(txtUpdatedPPrice);
             updateGrpBox.Controls.Add(label2);
-            updateGrpBox.Controls.Add(textBox1);
+            updateGrpBox.Controls.Add(txtUpdatePName);
             updateGrpBox.Controls.Add(label1);
             updateGrpBox.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             updateGrpBox.Location = new Point(99, 219);
             updateGrpBox.Name = "updateGrpBox";
-            updateGrpBox.Size = new Size(577, 279);
+            updateGrpBox.Size = new Size(587, 351);
             updateGrpBox.TabIndex = 1;
             updateGrpBox.TabStop = false;
             updateGrpBox.Text = "Let's Update The Product";
             updateGrpBox.Enter += groupBox1_Enter;
             // 
-            // textBox1
+            // txtPIndex
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(234, 70);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(198, 29);
-            textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtPIndex.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPIndex.Location = new Point(243, 67);
+            txtPIndex.Name = "txtPIndex";
+            txtPIndex.Size = new Size(247, 29);
+            txtPIndex.TabIndex = 9;
             // 
-            // label1
+            // button1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(98, 70);
-            label1.Name = "label1";
-            label1.Size = new Size(90, 37);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            button1.Location = new Point(15, 288);
+            button1.Name = "button1";
+            button1.Size = new Size(546, 43);
+            button1.TabIndex = 8;
+            button1.Text = "Update Product";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // lblPIndex
+            // 
+            lblPIndex.AutoSize = true;
+            lblPIndex.Location = new Point(15, 57);
+            lblPIndex.Name = "lblPIndex";
+            lblPIndex.Size = new Size(180, 37);
+            lblPIndex.TabIndex = 8;
+            lblPIndex.Text = "Product Index";
+            // 
+            // cbxUpdateProduct
+            // 
+            cbxUpdateProduct.AllowDrop = true;
+            cbxUpdateProduct.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbxUpdateProduct.FormattingEnabled = true;
+            cbxUpdateProduct.Location = new Point(243, 253);
+            cbxUpdateProduct.Name = "cbxUpdateProduct";
+            cbxUpdateProduct.Size = new Size(247, 29);
+            cbxUpdateProduct.TabIndex = 7;
+            cbxUpdateProduct.SelectedIndexChanged += cbxUpdateProduct_SelectedIndexChanged;
+            // 
+            // txtPCatagory
+            // 
+            txtPCatagory.AutoSize = true;
+            txtPCatagory.Location = new Point(10, 245);
+            txtPCatagory.Name = "txtPCatagory";
+            txtPCatagory.Size = new Size(227, 37);
+            txtPCatagory.TabIndex = 6;
+            txtPCatagory.Text = "Product Qatagory";
+            // 
+            // txtUpdatedPQuantty
+            // 
+            txtUpdatedPQuantty.AutoSize = true;
+            txtUpdatedPQuantty.Location = new Point(10, 196);
+            txtUpdatedPQuantty.Name = "txtUpdatedPQuantty";
+            txtUpdatedPQuantty.Size = new Size(218, 37);
+            txtUpdatedPQuantty.TabIndex = 5;
+            txtUpdatedPQuantty.Text = "Product Quantity";
+            txtUpdatedPQuantty.Click += label3_Click;
+            // 
+            // txtUpdatedPquantity
+            // 
+            txtUpdatedPquantity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUpdatedPquantity.Location = new Point(243, 204);
+            txtUpdatedPquantity.Name = "txtUpdatedPquantity";
+            txtUpdatedPquantity.Size = new Size(247, 29);
+            txtUpdatedPquantity.TabIndex = 4;
+            // 
+            // txtUpdatedPPrice
+            // 
+            txtUpdatedPPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUpdatedPPrice.Location = new Point(243, 159);
+            txtUpdatedPPrice.Name = "txtUpdatedPPrice";
+            txtUpdatedPPrice.Size = new Size(247, 29);
+            txtUpdatedPPrice.TabIndex = 3;
+            txtUpdatedPPrice.TextChanged += textBox2_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(98, 125);
+            label2.Location = new Point(10, 151);
             label2.Name = "label2";
-            label2.Size = new Size(90, 37);
+            label2.Size = new Size(173, 37);
             label2.TabIndex = 2;
-            label2.Text = "label2";
+            label2.Text = "Product Price";
             label2.Click += label2_Click_1;
             // 
-            // textBox2
+            // txtUpdatePName
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(234, 125);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(198, 29);
-            textBox2.TabIndex = 3;
-            textBox2.TextChanged += textBox2_TextChanged;
+            txtUpdatePName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUpdatePName.Location = new Point(243, 113);
+            txtUpdatePName.Name = "txtUpdatePName";
+            txtUpdatePName.Size = new Size(247, 29);
+            txtUpdatePName.TabIndex = 1;
+            txtUpdatePName.TextChanged += textBox1_TextChanged;
             // 
-            // textBox3
+            // label1
             // 
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(234, 178);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(198, 29);
-            textBox3.TabIndex = 4;
+            label1.AutoSize = true;
+            label1.Location = new Point(10, 103);
+            label1.Name = "label1";
+            label1.Size = new Size(187, 37);
+            label1.TabIndex = 0;
+            label1.Text = "Product Name";
             // 
-            // label3
+            // pictureBox1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(98, 170);
-            label3.Name = "label3";
-            label3.Size = new Size(90, 37);
-            label3.TabIndex = 5;
-            label3.Text = "label3";
-            label3.Click += label3_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(98, 218);
-            label4.Name = "label4";
-            label4.Size = new Size(90, 37);
-            label4.TabIndex = 6;
-            label4.Text = "label4";
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(234, 226);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(198, 29);
-            comboBox1.TabIndex = 7;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(465, 226);
-            button1.Name = "button1";
-            button1.Size = new Size(106, 47);
-            button1.TabIndex = 8;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            pictureBox1.Image = Properties.Resources.back_button;
+            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(73, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // updateProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 535);
+            ClientSize = new Size(825, 582);
+            Controls.Add(pictureBox1);
             Controls.Add(updateGrpBox);
             Controls.Add(pDataGV);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -169,6 +207,7 @@
             ((System.ComponentModel.ISupportInitialize)pDataGV).EndInit();
             updateGrpBox.ResumeLayout(false);
             updateGrpBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -176,14 +215,17 @@
 
         private DataGridView pDataGV;
         private GroupBox updateGrpBox;
-        private TextBox textBox1;
+        private TextBox txtUpdatePName;
         private Label label1;
         private Label label2;
-        private TextBox textBox2;
-        private Label label3;
-        private TextBox textBox3;
-        private ComboBox comboBox1;
-        private Label label4;
+        private TextBox txtUpdatedPPrice;
+        private Label txtUpdatedPQuantty;
+        private TextBox txtUpdatedPquantity;
+        private ComboBox cbxUpdateProduct;
+        private Label txtPCatagory;
         private Button button1;
+        private PictureBox pictureBox1;
+        private Label lblPIndex;
+        private TextBox txtPIndex;
     }
 }

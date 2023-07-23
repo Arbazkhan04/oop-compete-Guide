@@ -164,7 +164,7 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // Form2
+            // SingUpForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -176,8 +176,9 @@
             Controls.Add(label1);
             Controls.Add(button1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            Name = "Form2";
+            Name = "SingUpForm";
             Text = "Form2";
+            Load += SingUpForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

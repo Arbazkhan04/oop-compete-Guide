@@ -15,7 +15,9 @@ namespace Business_Application.DL
 
        public static void addPurchasedProduct(Product p)
         {
-            // here is error load this data into the storepruchased data inot the file 
+            // here is error load this data into the storepruchased data inot the file
+            
+
             if(!IsPurchasedProductEist(p))
             {
             userPurchasedProductList.Add(p);
@@ -54,7 +56,7 @@ namespace Business_Application.DL
         }
         public static void storePurchasedProductIntoTheFile()
         {
-            String path = "purchasedProduct.txt";
+            String path = "C:\\Users\\Arbaz khan\\OneDrive\\Desktop\\oop-compete-Guide\\Desktop Business application\\E-commernece app\\E-commernece app\\bin\\Debug\\purchasedProduct.txt";
             StreamWriter file = new StreamWriter(path, false);
              foreach(Product p in userPurchasedProductList)
             {
@@ -68,7 +70,7 @@ namespace Business_Application.DL
 
         public static void loadPurchasedData()
         {
-            string path = "purchasedProduct.txt";
+            string path = "C:\\Users\\Arbaz khan\\OneDrive\\Desktop\\oop-compete-Guide\\Desktop Business application\\E-commernece app\\E-commernece app\\bin\\Debug\\purchasedProduct.txt";
             if (File.Exists(path))
             {
                 StreamReader file = new StreamReader(path);
@@ -81,7 +83,7 @@ namespace Business_Application.DL
                     int pQuantity = int.Parse(ProductDL.parseData(record, 3));
                     string pCategory = ProductDL.parseData(record, 4);
 
-                    if (pCategory == "Mobile")
+                    if (pCategory == "Mobiles")
                     {
                         Mobiles mobile = new Mobiles(pName, pPrice, pQuantity);
                         addPurchasedProduct(mobile);

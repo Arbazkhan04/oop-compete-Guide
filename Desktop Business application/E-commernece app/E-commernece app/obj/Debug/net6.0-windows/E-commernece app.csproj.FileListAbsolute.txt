@@ -22,3 +22,17 @@ C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business applicat
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.LoginForm.resources
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.SingUpForm.resources
 C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.DeleteForm.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.AdminProductDetailForm.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.adminSoldProductForm.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.adminViewAllProduct.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.UserListForm.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.ProductAnalystics.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.totalSoldProduct.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.AdminEditProfileSetting.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.isValidCrendentialsForUsers.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.UserViewProductForm.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.buyProductForm.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.filterProductForm.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.ViewCartForm.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.userTrendingProduct.resources
+C:\Users\Arbaz khan\OneDrive\Desktop\oop-compete-Guide\Desktop Business application\E-commernece app\E-commernece app\obj\Debug\net6.0-windows\E_commernece_app.editUserCredentials.resources

@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="AdminEditProfileSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AdminModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -13,19 +16,34 @@
     <Compile Update="adminViewAllProduct.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="buyProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CreateProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="DeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="editUserCredentials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="filterProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="isValidCrendentialsForUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ProductAnalysticsForm.cs">
+    <Compile Update="ProductAnalystics.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SingUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="totalSoldProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="updateProductForm.cs">
@@ -35,6 +53,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="userTrendingProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserViewProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ViewCartForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

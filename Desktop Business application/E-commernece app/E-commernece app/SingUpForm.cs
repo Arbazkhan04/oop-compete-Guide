@@ -114,5 +114,18 @@ namespace E_commernece_app
             form1.Show();
             this.Hide();
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SingUpForm_Load(object sender, EventArgs e)
+        {
+            ProductDL.laodProductDataFromFile();//load product data
+            UserDL.loadPurchasedData();
+
+
+        }
     }
 }

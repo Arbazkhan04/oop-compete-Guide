@@ -39,13 +39,15 @@
             txtPPrice = new TextBox();
             txtPName = new TextBox();
             lblPName = new Label();
+            pictureBox1 = new PictureBox();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(308, 46);
+            label1.Location = new Point(339, 47);
             label1.Name = "label1";
             label1.Size = new Size(171, 15);
             label1.TabIndex = 0;
@@ -53,6 +55,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = SystemColors.Control;
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(lblCatagory);
             groupBox1.Controls.Add(comboBox1);
@@ -73,12 +76,13 @@
             // 
             // button1
             // 
-            button1.Location = new Point(172, 259);
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.Location = new Point(0, 274);
             button1.Name = "button1";
-            button1.Size = new Size(90, 35);
+            button1.Size = new Size(610, 46);
             button1.TabIndex = 8;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            button1.Text = "Create Product";
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // lblCatagory
@@ -151,11 +155,23 @@
             lblPName.TabIndex = 0;
             lblPName.Text = "Product Name";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.back_button;
+            pictureBox1.Location = new Point(22, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(66, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // CreateProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Name = "CreateProductForm";
@@ -163,6 +179,7 @@
             Load += CreateProductForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -180,5 +197,6 @@
         private Label lblPQuantity;
         private Button button1;
         private Label lblCatagory;
+        private PictureBox pictureBox1;
     }
 }

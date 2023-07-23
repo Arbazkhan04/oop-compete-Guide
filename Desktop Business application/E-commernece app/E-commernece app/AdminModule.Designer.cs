@@ -331,6 +331,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox3
             // 
@@ -430,6 +431,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(206, 100);
             panel3.TabIndex = 2;
+            panel3.Paint += panel3_Paint;
             // 
             // label6
             // 
