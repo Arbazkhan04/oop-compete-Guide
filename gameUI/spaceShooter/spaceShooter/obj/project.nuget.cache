@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "i3wRY+txQfM7mCSlcslmGfzL4flQGkJKUvzqkZI+5enpjmUtdF+3aqGIxyscAzU4/yGPVT9FfxlIxXMy6ahTnw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Arbaz khan\\OneDrive\\Desktop\\oop-compete-Guide\\gameUI\\spaceShooter\\spaceShooter\\spaceShooter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Arbaz khan\\.nuget\\packages\\ezinput\\1.3.2\\ezinput.1.3.2.nupkg.sha512"
+  ],
+  "logs": []
+}
