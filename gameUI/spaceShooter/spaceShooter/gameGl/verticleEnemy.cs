@@ -1,4 +1,5 @@
-﻿using PacMan.GameGL;
+﻿using PackmanGui.GameGL;
+using PacMan.GameGL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,21 +19,40 @@ namespace spaceShooter.gameGl
         {
             GameCell currentCell = this.CurrentCell;
             GameCell nextCell = currentCell.nextCell(gameDirection);
-            previousGameObject = nextCell.CurrentGameObject;
-            this.CurrentCell = nextCell;
-            if (currentCell != nextCell)
+
+            if (nextCell != currentCell)
             {
-                currentCell.setGameObject(previousGameObject);
-            }
-            else if (gameDirection == GameDirection.Up)
-            {
-                gameDirection = GameDirection.Down;
+                if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.ENEMY)
+                {
+                    if (gameDirection == GameDirection.Down)
+                    {
+                        gameDirection = GameDirection.Up;
+                    }
+                    else
+                    {
+                        gameDirection = GameDirection.Down;
+                    }
+                }
+                else
+                {
+                    currentCell.setGameObject(Game.getBlankGameObject());
+                    this.CurrentCell = nextCell;
+                }
             }
             else
             {
-                gameDirection = GameDirection.Up;
+                if (gameDirection == GameDirection.Down)
+                {
+                    gameDirection = GameDirection.Up;
+                }
+                else
+                {
+                    gameDirection = GameDirection.Down;
+                }
             }
+
             return currentCell;
         }
+
     }
 }

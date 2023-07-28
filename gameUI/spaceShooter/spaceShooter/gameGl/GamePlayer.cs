@@ -10,12 +10,10 @@ using System.Windows.Forms;
 namespace spaceShooter.gameGl
 {
     public class GamePlayer:GameObject
-    {
-        int score;
-        public GamePlayer(Image img, GameCell startCell) : base(GameObjectType.PLAYER, img)
+    { int score;
+        public GamePlayer(Image img, GameCell startCell,GameDirection direction) : base(GameObjectType.PLAYER, img)
         {
             this.CurrentCell = startCell;
-            
         }
         public GameCell move(GameDirection direction)
         {
@@ -31,7 +29,7 @@ namespace spaceShooter.gameGl
             {
                 currentCell.setGameObject(Game.getBlankGameObject());
             }
-
+            base.Img = Game.getImageForPlayer(direction);
             return nextCell;
         }
 

@@ -1,4 +1,5 @@
-﻿using PacMan.GameGL;
+﻿using PackmanGui.GameGL;
+using PacMan.GameGL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,26 +15,44 @@ namespace spaceShooter.gameGl
         {
         }
 
-        public override GameCell move() //move ghost horizantal
+        public override GameCell move()
         {
             GameCell currentCell = this.CurrentCell;
             GameCell nextCell = currentCell.nextCell(gameDirection);
-            previosGameObject = nextCell.CurrentGameObject;
-            this.CurrentCell = nextCell;
-            if (currentCell != nextCell)
+
+            if (nextCell != currentCell)
             {
-                currentCell.setGameObject(previosGameObject);
-            }
-            else if (gameDirection == GameDirection.Right)
-            {
-                this.gameDirection = GameDirection.Left;
+                if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.ENEMY)
+                {
+                    if (gameDirection == GameDirection.Right)
+                    {
+                        gameDirection = GameDirection.Left;
+                    }
+                    else
+                    {
+                        gameDirection = GameDirection.Right;
+                    }
+                }
+                else
+                {
+                    currentCell.setGameObject(Game.getBlankGameObject());
+                    this.CurrentCell = nextCell;
+                }
             }
             else
             {
-                this.gameDirection = GameDirection.Right;
+                if (gameDirection == GameDirection.Right)
+                {
+                    gameDirection = GameDirection.Left;
+                }
+                else
+                {
+                    gameDirection = GameDirection.Right;
+                }
             }
 
             return currentCell;
         }
+
     }
 }

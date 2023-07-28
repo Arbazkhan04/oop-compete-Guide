@@ -26,21 +26,6 @@ namespace PacMan.GameGL
 
         public  void setGameObject(GameObject gameObject)
         {
-            /* if(gameObject.GameObjectType == GameObjectType.PLAYER)
-             {
-
-                 pictureBox.Size = new Size(width+50, height+50);
-                 pictureBox.Image = gameObject.Img;
-                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-                 pictureBox.BackColor = Color.Transparent;
-                 currentGameObject = gameObject;
-             }
-             else
-             {
-              pictureBox.Image = gameObject.Img;
-              currentGameObject = gameObject;
-             }*/
-
             currentGameObject = gameObject;
 
             if (gameObject.GameObjectType == GameObjectType.PLAYER)
@@ -67,6 +52,8 @@ namespace PacMan.GameGL
 
             pictureBox.Image = gameObject.Img;
         }
+
+
         public GameCell nextCell(GameDirection direction)
         {
           

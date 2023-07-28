@@ -21,7 +21,8 @@ namespace spaceShooter
             //player
             Image pacManImage = Game.getGameObjectImage('P');
             GameCell startCell = grid.getCell(10, 10);
-            player = new GamePlayer(pacManImage, startCell);
+            player = new GamePlayer(pacManImage, startCell,GameDirection.Up);
+            Game.setPlayer(player);
 
 
             //horizatal ghsot
@@ -39,9 +40,15 @@ namespace spaceShooter
             Image rImg = Game.getGameObjectImage('r');
             randomEnemy rEnemies = new randomEnemy(rImg, rCell, GameDirection.Down);
 
+            //random ghost
+            GameCell sCell = grid.getCell(15, 33);
+            Image sImg = Game.getGameObjectImage('r');
+            randomEnemy sEnemies = new randomEnemy(sImg, sCell, GameDirection.Down);
+
             enemies.Add(vEnemies);
             enemies.Add(hEnemies);
             enemies.Add(rEnemies);
+            enemies.Add(sEnemies);
             printMaze(grid);
         }
 
@@ -85,11 +92,17 @@ namespace spaceShooter
             {
                 player.move(GameDirection.Down);
             }
-
-            foreach(gameEnemy enemy in enemies)
+           
+            foreach (gameEnemy enemy in enemies)
             {
                 enemy.move();
             }
+
+         
         }
+
+        
+      
+
     }
 }

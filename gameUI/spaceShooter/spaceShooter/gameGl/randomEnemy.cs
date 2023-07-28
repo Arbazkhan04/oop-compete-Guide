@@ -24,8 +24,9 @@ namespace spaceShooter.gameGl
             previousGameObject = nextCell.CurrentGameObject;
             this.CurrentCell = nextCell;
 
-            if (currentCell != nextCell)
+            if (currentCell != nextCell && nextCell.CurrentGameObject.GameObjectType == GameObjectType.ENEMY)
             {
+                
                 currentCell.setGameObject(previousGameObject);
             }
             else
@@ -36,7 +37,7 @@ namespace spaceShooter.gameGl
                 {
                     moveCounter = 0;
 
-                    // Generate a random number to choose a new direction
+                    // Generate a random number to choose a new direction0
                     int randomNumber = generateRandomNumber();
                     switch (randomNumber)
                     {
