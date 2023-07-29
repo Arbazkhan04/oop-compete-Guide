@@ -2,18 +2,19 @@ using EZInput;
 using PackmanGui.GameGL;
 using PacMan.GameGL;
 using spaceShooter.gameGl;
+using System.CodeDom.Compiler;
 
 namespace spaceShooter
 {
     public partial class Form1 : Form
     {
+        private Bullet playerBullet;
         GamePlayer player;
         private List<gameEnemy> enemies = new List<gameEnemy>();
         public Form1()
         {
             InitializeComponent();
         }
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -92,17 +93,26 @@ namespace spaceShooter
             {
                 player.move(GameDirection.Down);
             }
-           
+
+            if (Keyboard.IsKeyPressed(Key.Space))
+            {
+                player.FireBullet();
+            }
+
+            // Move and handle collisions for bullets
+            for (int i = player.bullets.Count - 1; i >= 0; i--)
+            {
+                Bullet bullet = player.bullets[i];
+                bullet.Move();
+            }
+
+            
+
+
             foreach (gameEnemy enemy in enemies)
             {
                 enemy.move();
             }
-
-         
         }
-
-        
-      
-
     }
 }
