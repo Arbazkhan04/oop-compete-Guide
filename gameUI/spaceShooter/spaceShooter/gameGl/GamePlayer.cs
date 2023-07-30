@@ -13,6 +13,7 @@ namespace spaceShooter.gameGl
     { 
         int score;
         public List<Bullet> bullets = new List<Bullet>();
+
         GameDirection direction;
         public GamePlayer(Image img, GameCell startCell,GameDirection direction) : base(GameObjectType.PLAYER, img)
         {
@@ -36,15 +37,14 @@ namespace spaceShooter.gameGl
             base.Img = Game.getImageForPlayer(direction);
             return nextCell;
         }
-        public void FireBullet()
+        public void FireBullet(GameDirection direction2)
         {
             // Calculate the next cell for the bullet based on the player's direction.
-            GameCell nextCell = CurrentCell.nextCell(direction);
+            GameCell nextCell = CurrentCell.nextCell(direction2);
 
             // Create a new bullet and add it to the list at the next cell.
-            Bullet bullet = new Bullet(Game.getBulletImage(), nextCell, direction);
+            Bullet bullet = new Bullet(Game.getBulletImage(), nextCell, direction2);
             bullets.Add(bullet);
-
         }
         public int Score { get => score; set => score = value; }
         public Image PlayerImage { get; private set; }

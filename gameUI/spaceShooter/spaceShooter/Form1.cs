@@ -11,6 +11,7 @@ namespace spaceShooter
         private Bullet playerBullet;
         GamePlayer player;
         private List<gameEnemy> enemies = new List<gameEnemy>();
+        private GameDirection playerDirection;
         public Form1()
         {
             InitializeComponent();
@@ -72,47 +73,52 @@ namespace spaceShooter
 
         private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (Keyboard.IsKeyPressed(Key.LeftArrow))
             {
-                player.move(GameDirection.Left);
+                playerDirection = GameDirection.Left;
+                player.move(playerDirection);
             }
             if (Keyboard.IsKeyPressed(Key.RightArrow))
             {
-                player.move(GameDirection.Right);
+                playerDirection = GameDirection.Right;
+                player.move(playerDirection);
             }
             if (Keyboard.IsKeyPressed(Key.UpArrow))
             {
-                player.move(GameDirection.Up);
+                playerDirection = GameDirection.Up;
+                player.move(playerDirection);
             }
             if (Keyboard.IsKeyPressed(Key.DownArrow))
             {
-                player.move(GameDirection.Down);
+                playerDirection = GameDirection.Down;
+                player.move(playerDirection);
             }
 
             if (Keyboard.IsKeyPressed(Key.Space))
             {
-                player.FireBullet();
+                player.FireBullet(playerDirection);
             }
 
             // Move and handle collisions for bullets
             for (int i = player.bullets.Count - 1; i >= 0; i--)
             {
                 Bullet bullet = player.bullets[i];
+              
                 bullet.Move();
+               
             }
-
-            
-
 
             foreach (gameEnemy enemy in enemies)
             {
                 enemy.move();
             }
         }
+
+       
+
     }
 }

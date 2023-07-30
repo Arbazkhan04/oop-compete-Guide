@@ -63,6 +63,16 @@ namespace spaceShooter {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap downBullet {
+            get {
+                object obj = ResourceManager.GetObject("downBullet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap downPlayer {
             get {
                 object obj = ResourceManager.GetObject("downPlayer", resourceCulture);
@@ -86,6 +96,16 @@ namespace spaceShooter {
         internal static System.Drawing.Bitmap horizontal {
             get {
                 object obj = ResourceManager.GetObject("horizontal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap leftBullet {
+            get {
+                object obj = ResourceManager.GetObject("leftBullet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +156,16 @@ namespace spaceShooter {
         internal static System.Drawing.Bitmap simplebox {
             get {
                 object obj = ResourceManager.GetObject("simplebox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upBullet {
+            get {
+                object obj = ResourceManager.GetObject("upBullet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

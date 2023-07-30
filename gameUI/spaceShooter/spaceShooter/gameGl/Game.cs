@@ -27,6 +27,29 @@ namespace PackmanGui.GameGL
         }
 
 
+        public static Image getImageForBullet(GameDirection direction)
+        {
+            Image img = spaceShooter.Resource1.simplebox;
+            if (direction == GameDirection.Left)
+            {
+                img = spaceShooter.Resource1.leftBullet;
+            }
+            else if (direction == GameDirection.Right)
+            {
+                img = spaceShooter.Resource1.upBullet; //right bullet anme not changed
+            }
+            else if (direction == GameDirection.Up)
+            {
+                img = spaceShooter.Resource1.fire;
+
+            }
+            else if (direction == GameDirection.Down)
+            {
+                img = spaceShooter.Resource1.downBullet;
+            }
+            return img;
+        }
+
         public static Image getImageForPlayer(GameDirection direction)
         {
             Image img = spaceShooter.Resource1.simplebox;

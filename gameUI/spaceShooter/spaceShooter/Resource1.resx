@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="downBullet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\downBullet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="downPlayer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\downPlayer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -127,8 +130,11 @@
   <data name="horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\horizontal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="leftBullet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\leftBullet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="leftPlayer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\leftPlayer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Resources\leftFire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="monster" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\monster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -141,6 +147,9 @@
   </data>
   <data name="simplebox" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\simplebox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upBullet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\upBullet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\vertical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
