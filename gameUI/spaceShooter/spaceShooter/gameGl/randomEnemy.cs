@@ -1,4 +1,5 @@
-﻿using PacMan.GameGL;
+﻿using PackmanGui.GameGL;
+using PacMan.GameGL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace spaceShooter.gameGl
             previousGameObject = nextCell.CurrentGameObject;
             this.CurrentCell = nextCell;
 
-            if (currentCell != nextCell && nextCell.CurrentGameObject.GameObjectType == GameObjectType.ENEMY)
+            if (currentCell != nextCell)
             {
                 
                 currentCell.setGameObject(previousGameObject);
@@ -36,7 +37,6 @@ namespace spaceShooter.gameGl
                 if (moveCounter >= 3)
                 {
                     moveCounter = 0;
-
                     // Generate a random number to choose a new direction0
                     int randomNumber = generateRandomNumber();
                     switch (randomNumber)
@@ -65,6 +65,16 @@ namespace spaceShooter.gameGl
             Random random = new Random();
             int randomNumber = random.Next(4);
             return randomNumber;
+        }
+
+        public override void FireBullet(GameDirection direction)
+        {
+            // Calculate the next cell for the bullet based on the enemy's direction.
+            GameCell nextCell = CurrentCell.nextCell(direction);
+
+            // Create a new bullet and add it to the list at the next cell.
+            smartEnemyBullet bullet = new smartEnemyBullet(Game.getBulletImage(), nextCell, direction);
+            EnemyBullet.enemyBullets.Add(bullet);
         }
     }
 }

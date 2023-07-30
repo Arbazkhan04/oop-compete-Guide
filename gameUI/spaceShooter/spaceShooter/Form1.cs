@@ -2,6 +2,7 @@ using EZInput;
 using PackmanGui.GameGL;
 using PacMan.GameGL;
 using spaceShooter.gameGl;
+using System;
 using System.CodeDom.Compiler;
 
 namespace spaceShooter
@@ -12,6 +13,8 @@ namespace spaceShooter
         GamePlayer player;
         private List<gameEnemy> enemies = new List<gameEnemy>();
         private GameDirection playerDirection;
+        public horizantalEnmey hEnemies;
+        private Random random = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +38,7 @@ namespace spaceShooter
             //veritclee ghsot
             GameCell hCell = grid.getCell(1,3);
             Image horizantal = Game.getGameObjectImage('v');
-            horizantalEnmey hEnemies = new horizantalEnmey(horizantal, hCell, GameDirection.Left);
+            hEnemies = new horizantalEnmey(horizantal, hCell, GameDirection.Left);
 
             //random ghost
             GameCell rCell = grid.getCell(10, 30);
@@ -46,6 +49,9 @@ namespace spaceShooter
             GameCell sCell = grid.getCell(15, 33);
             Image sImg = Game.getGameObjectImage('r');
             randomEnemy sEnemies = new randomEnemy(sImg, sCell, GameDirection.Down);
+
+
+            
 
             enemies.Add(vEnemies);
             enemies.Add(hEnemies);
@@ -107,18 +113,38 @@ namespace spaceShooter
             for (int i = player.bullets.Count - 1; i >= 0; i--)
             {
                 Bullet bullet = player.bullets[i];
-              
                 bullet.Move();
-               
             }
+
 
             foreach (gameEnemy enemy in enemies)
             {
                 enemy.move();
+                
+            }
+            foreach (gameEnemy enemy in enemies)
+            {
+                // Randomly fire bullets with a certain probability (you can use any other logic)
+                if (random.NextDouble() < 0.1)
+                {
+                    GameDirection randomDirection = (GameDirection)random.Next(0, 4); // Choose a random direction for firing
+                    enemy.FireBullet(randomDirection);
+                }
+            }
+            HandleEnemyBullets();
+
+        }
+
+        private void HandleEnemyBullets()
+        {
+            foreach (EnemyBullet enemyBullet in EnemyBullet.enemyBullets.ToList())
+            {
+                enemyBullet.Move();
             }
         }
 
-       
+
+
 
     }
 }

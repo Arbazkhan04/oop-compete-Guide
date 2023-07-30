@@ -34,7 +34,8 @@ namespace PacMan.GameGL
                 pictureBox.Top = x * height;
                 pictureBox.Size = new Size(width+50, height+50);
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-                pictureBox.BackColor = Color.Transparent;  
+                pictureBox.BackColor = Color.Transparent;
+               
             }
             else if(gameObject.GameObjectType == GameObjectType.ENEMY)
             {

@@ -13,6 +13,7 @@ namespace PacMan.GameGL
         ENEMY,
         REWARD,
         PLAYERBULLET,
+        ENEMYBULLET,
         NONE
     }
 }

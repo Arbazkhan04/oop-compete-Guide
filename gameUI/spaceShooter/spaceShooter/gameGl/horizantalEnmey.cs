@@ -1,5 +1,6 @@
 ﻿using PackmanGui.GameGL;
 using PacMan.GameGL;
+using spaceShooter.gameGl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,6 +54,14 @@ namespace spaceShooter.gameGl
 
             return currentCell;
         }
+        public override void FireBullet(GameDirection direction)
+        {
+            // Calculate the next cell for the bullet based on the enemy's direction.
+            GameCell nextCell = CurrentCell.nextCell(direction);
 
+            // Create a new bullet and add it to the list at the next cell.
+            HorizontalEnemyBullet bullet = new HorizontalEnemyBullet(Game.getBulletImage(), nextCell, direction);
+            EnemyBullet.enemyBullets.Add(bullet);
+        }
     }
 }

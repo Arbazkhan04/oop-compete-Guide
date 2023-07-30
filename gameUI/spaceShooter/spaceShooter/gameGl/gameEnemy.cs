@@ -17,5 +17,6 @@ namespace spaceShooter.gameGl
         }
 
         public abstract GameCell move();
+        public abstract void FireBullet(GameDirection direction);
     }
 }

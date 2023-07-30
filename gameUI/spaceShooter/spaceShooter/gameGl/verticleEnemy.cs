@@ -14,7 +14,6 @@ namespace spaceShooter.gameGl
         public verticleEnemy(Image img, GameCell currentCell, GameDirection gameDirection) : base(img, currentCell, gameDirection)
         {
         }
-
         public override GameCell move()
         {
             GameCell currentCell = this.CurrentCell;
@@ -52,6 +51,16 @@ namespace spaceShooter.gameGl
             }
 
             return currentCell;
+        }
+
+        public override void FireBullet(GameDirection direction)
+        {
+            // Calculate the next cell for the bullet based on the enemy's direction.
+            GameCell nextCell = CurrentCell.nextCell(direction);
+
+            // Create a new bullet and add it to the list at the next cell.
+            verticleEnemyBullet bullet = new verticleEnemyBullet(Game.getBulletImage(), nextCell, direction);
+            EnemyBullet.enemyBullets.Add(bullet);
         }
 
     }

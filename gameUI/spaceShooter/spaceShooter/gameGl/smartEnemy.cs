@@ -45,7 +45,7 @@ namespace spaceShooter.gameGl
             GameCell nextCell = currentCell.nextCell(direction);
             GameObjectType nextGameObjectType = nextCell.CurrentGameObject.GameObjectType;
 
-            if (nextCell != currentCell && nextGameObjectType != GameObjectType.WALL && nextGameObjectType != GameObjectType.ENEMY)
+            if (nextCell != currentCell)
             {
                 gameDirection = direction;
                 currentCell.setGameObject(Game.getBlankGameObject());
@@ -57,7 +57,14 @@ namespace spaceShooter.gameGl
         }
 
 
+        public override void FireBullet(GameDirection direction)
+        {
+            // Calculate the next cell for the bullet based on the enemy's direction.
+            GameCell nextCell = CurrentCell.nextCell(direction);
 
-
+            // Create a new bullet and add it to the list at the next cell.
+            smartEnemyBullet bullet = new smartEnemyBullet(Game.getBulletImage(), nextCell, direction);
+            EnemyBullet.enemyBullets.Add(bullet);
+        }
     }
 }
